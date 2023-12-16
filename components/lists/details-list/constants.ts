@@ -1,4 +1,4 @@
-import { IDetailsItem } from 'details-item';
+import { IDetailsItem } from '@/components/lists/details-list/details-item';
 
 export const detailsList: IDetailsItem[] = [
   {

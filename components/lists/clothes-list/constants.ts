@@ -1,4 +1,4 @@
-import { IClothesItem } from 'clothes-item';
+import { IClothesItem } from '@/components/lists/clothes-list/clothes-item';
 
 export const clothesListMan: IClothesItem[] = [
   { title: 'Черный верх - белый низ' },
