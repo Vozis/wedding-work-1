@@ -1,0 +1,65 @@
+.clothesContent {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'manInfo manInfo'
+    'manPhoto manPhoto'
+    'womanInfo womanInfo'
+    'womanPhoto womanPhoto';
+
+  @media (min-width: 768px) {
+    @apply px-5;
+    grid-template-areas:
+      'manInfo manPhoto'
+      'manInfo manPhoto'
+      'womanInfo womanPhoto'
+      'womanInfo womanPhoto';
+    grid-template-columns: 1fr 2fr;
+  }
+
+  &__manInfo {
+    grid-area: manInfo;
+    @apply px-5 lg:px-0;
+  }
+
+  &__manPhoto {
+    display: grid;
+    grid-area: manPhoto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(220px, 1fr));
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-rows: minmax(190px, auto);
+      @apply px-5;
+    }
+  }
+
+  &__womanInfo {
+    grid-area: womanInfo;
+    @apply px-5 lg:px-0;
+  }
+
+  &__womanPhoto {
+    display: grid;
+    grid-area: womanPhoto;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, minmax(0, auto));
+      grid-template-rows: 190px;
+      @apply px-5;
+    }
+
+    .itemTwo {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: minmax(220px, auto);
+    }
+
+    .itemThree {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-rows: minmax(220px, auto);
+    }
+  }
+}

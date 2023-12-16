@@ -1,0 +1,107 @@
+/* React Select */
+.custom-select {
+  &__control {
+    background-color: white !important;
+    border: none !important;
+    border-bottom: 1px solid #d1d5dc !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    //min-width: 260px !important;
+    width: 100% !important;
+    @apply px-2 py-2;
+
+    &--menu-is-open {
+      border-color: black !important;
+    }
+  }
+
+  &__value-container {
+    cursor: text !important;
+    padding: 0 !important;
+  }
+
+  &__input-container {
+    color: #d1d5dc !important;
+  }
+
+  &__indicator-separator {
+    //display: none !important;
+
+    &:hover {
+      color: black !important;
+    }
+  }
+
+  &__indicators {
+    cursor: pointer !important;
+    display: flex !important;
+  }
+
+  &__indicator {
+    color: #66676e !important;
+
+    &:hover {
+      color: black !important;
+    }
+  }
+
+  &__multi-value {
+    background-color: transparent !important;
+    border: 0.5px solid black !important;
+    border-radius: 0.75rem !important;
+  }
+
+  &__multi-value__label {
+    color: black !important;
+    font-size: 80% !important;
+    margin-top: 3px !important;
+  }
+
+  &__multi-value__remove {
+    color: #6b7280 !important;
+
+    &:hover {
+      background-color: transparent !important;
+      color: black !important;
+    }
+  }
+
+  &__menu {
+    background-color: white !important;
+    color: #6b7280 !important;
+  }
+
+  &__option {
+    cursor: pointer !important;
+    &--is-focused {
+      background-color: white !important;
+      color: black !important;
+    }
+  }
+
+  &-container {
+    > div {
+      box-shadow: none !important;
+      outline: none !important;
+    }
+
+    .form-control__control {
+      //@apply outline-border-none transition-all;
+      border-color: #ced4da !important;
+      box-shadow: none !important;
+    }
+
+    &:hover,
+    &--menu-is-open {
+      border-color: #ced4da !important;
+    }
+
+    .form-control__indicators {
+      @apply cursor-pointer;
+    }
+  }
+
+  &__menu {
+    //@apply animate-scaleIn;
+  }
+}

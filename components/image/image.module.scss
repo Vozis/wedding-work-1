@@ -1,0 +1,40 @@
+.image {
+  width: 170px;
+  height: 320px;
+  background-size: cover;
+  background-position: right;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "";
+    border: 1px solid black;
+  }
+
+  &__left {
+    border-radius: 150px 0 150px 0;
+    margin-left: 20px;
+
+    &:after {
+      top: -20px;
+      bottom: 20px;
+      left: -20px;
+      right: 20px;
+      border-radius: 150px 0 150px 0;
+    }
+  }
+
+  &__right {
+    border-radius: 0 150px 0 150px;
+    margin-left: 20px;
+
+    &:after {
+      top: -20px;
+      bottom: 20px;
+      left: -20px;
+      right: 20px;
+      border-radius: 0 150px 0 150px;
+    }
+  }
+}
+
