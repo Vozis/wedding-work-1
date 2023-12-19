@@ -38,6 +38,8 @@ export const ReactSelectField: FC<ISelect> = ({
   placeholder,
   defaultValue,
   onInputChange,
+  closeMenuOnSelect,
+  isClearable,
 }) => {
   const id = uuidv4();
   const [isMounted, setIsMounted] = useState<boolean>(false);
@@ -66,13 +68,13 @@ export const ReactSelectField: FC<ISelect> = ({
   };
 
   return (
-    <div className={''}>
+    <div className={'w-full'}>
       <label>
         <p className={'text-xl'}>{label}</p>
         {isMounted ? (
           <Select
             id={id}
-            closeMenuOnSelect={false}
+            closeMenuOnSelect={closeMenuOnSelect}
             classNamePrefix={'custom-select'}
             isSearchable={false}
             options={options}
@@ -81,7 +83,7 @@ export const ReactSelectField: FC<ISelect> = ({
             isLoading={isLoading}
             value={getValue()}
             onChange={onChange}
-            isClearable
+            isClearable={isClearable}
             onFocus={onInputChange}
             defaultValue={defaultValue}
             placeholder={placeholder}

@@ -7,10 +7,13 @@ import Image from 'next/image';
 
 import arrow from '@/public/img/Arrow.svg';
 import { useMediaQuery } from 'usehooks-ts';
+import dynamic from 'next/dynamic';
+
+const DynamicPlayer = dynamic(() => import('@/components/player'), {
+  ssr: false,
+});
 
 export default function StartSection() {
-  // const isMobile = useMediaQuery('(max-width:650px)');
-
   return (
     <section
       className={'relative flex pb-5 md:justify-center'}
@@ -22,7 +25,7 @@ export default function StartSection() {
         className={'absolute bottom-0 left-0 right-0 top-0 -z-1 md:hidden'}
         style={{
           background:
-            "linear-gradient(180deg, rgba(124, 124, 124, 0.00) 30.24%, rgba(0, 0, 0, 0.60) 67.66%, rgba(0, 0, 0, 0.78) 81.47%, #000 100%), url('/img/start-image.jpg'), lightgray 50% / cover no-repeat",
+            "linear-gradient(180deg, rgba(124, 124, 124, 0.00) 30.24%, rgba(0, 0, 0, 0.60) 67.66%, rgba(0, 0, 0, 0.78) 81.47%, #000 100%), url('/img/start/mobile.jpg'), lightgray 50% / cover no-repeat",
           backgroundSize: 'cover',
           backgroundPosition: 'right bottom',
           borderRadius: '500px 0 0 0',
@@ -85,13 +88,13 @@ export default function StartSection() {
           <SuperTitle
             title={'Илья'}
             className={
-              's:text-[9rem] s:leading-[5rem] text-right text-[8rem] leading-[4rem] md:text-white'
+              'text-right text-[8rem] leading-[4rem] s:text-[9rem] s:leading-[5rem] md:text-white'
             }
           />
           <SuperTitle
             title={'Анастасия'}
             className={
-              's:text-[9rem] s:leading-[5rem] block text-center text-[8rem] leading-[4rem] md:text-white '
+              'block text-center text-[8rem] leading-[4rem] s:text-[9rem] s:leading-[5rem] md:text-white '
             }
           />
         </div>

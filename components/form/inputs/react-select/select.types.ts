@@ -10,6 +10,8 @@ export interface IOption {
 export interface ISelect extends IFieldProps {
   options: Options<IOption>;
   isMulti?: boolean;
+  isClearable?: boolean;
+  closeMenuOnSelect?: boolean;
   field: ControllerRenderProps<any, any>;
   isLoading?: boolean;
   onInputChange?: (value: any) => void;

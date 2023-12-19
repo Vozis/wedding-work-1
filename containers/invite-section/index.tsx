@@ -2,16 +2,21 @@ import Title from '@/components/typography/title';
 import Description from '@/components/typography/description';
 import Divider from '@/components/divider';
 import ImageBlock from '@/components/image';
+import dynamic from 'next/dynamic';
+import { PlayerProvider } from '@/providers/player';
+import React from 'react';
+import AnimateSection from '@/components/animate/section';
+import { AnimatePresence } from 'framer-motion';
 
 export default function InviteSection() {
   return (
-    <section
+    <AnimateSection
       id={'inviteSection'}
       className={
         'mt-12 max-w-screen-xl px-5 md:flex md:gap-12 lg:mx-auto lg:mt-28'
       }
     >
-      <div className={'flex flex-col items-center gap-4 '}>
+      <div className={'flex flex-col items-center gap-4 md:gap-10'}>
         <Title title={'Дорогие гости'} className={'text-center'} />
         <div className={'flex items-center justify-center gap-3'}>
           <p className={'text-4xl font-bold'}>08</p>
@@ -46,11 +51,11 @@ export default function InviteSection() {
           path={'/img/image-1.jpg'}
         />
         <ImageBlock
-          className={'md:hidden'}
+          className={'md:hidden lg:block'}
           direction={'left'}
           path={'/img/image-1.jpg'}
         />
       </div>
-    </section>
+    </AnimateSection>
   );
 }

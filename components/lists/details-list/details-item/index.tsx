@@ -18,7 +18,7 @@ const DetailsItem: FC<PropsWithChildren<IDetailsItem>> = ({
 }) => {
   return (
     <div
-      className={cn('flex flex-col items-center gap-3 text-center', className)}
+      className={cn('flex flex-col items-center gap-4 text-center', className)}
     >
       <Subtitle title={title} />
       <Divider className={'lg:hidden'} />

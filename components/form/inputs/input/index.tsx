@@ -22,7 +22,7 @@ export const InputField = forwardRef<HTMLInputElement, IField>(
     ref,
   ) => {
     return (
-      <div className={'relative'} style={style}>
+      <div className={'relative w-full'} style={style}>
         <label className={''}>
           <span className={'text-xl'}>{label}</span>
           <div className={''}>

@@ -41,10 +41,6 @@ export default function MobileMenu({ content }: Props) {
         document.body.getBoundingClientRect().top -
         70,
     });
-
-    // elem?.scrollIntoView({
-    //   behavior: 'smooth',
-    // });
   };
 
   return (

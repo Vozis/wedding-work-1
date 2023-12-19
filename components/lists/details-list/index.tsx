@@ -8,7 +8,11 @@ interface IDetailsList {
 
 export default function DetailsList({ items }: IDetailsList) {
   return (
-    <ul className={'flex flex-col gap-4 lg:flex-row lg:items-start lg:gap-10'}>
+    <ul
+      className={
+        'flex flex-col gap-4 md:gap-10 lg:flex-row lg:items-start lg:gap-20'
+      }
+    >
       {items.map((item, index) => (
         <DetailsItem
           title={item.title}

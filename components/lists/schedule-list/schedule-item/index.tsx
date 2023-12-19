@@ -8,6 +8,7 @@ export interface IScheduleItem {
   time: string;
   className?: string;
   image: string;
+  isEnded?: boolean;
 }
 
 const ScheduleItem: FC<PropsWithChildren<IScheduleItem>> = ({
@@ -16,12 +17,16 @@ const ScheduleItem: FC<PropsWithChildren<IScheduleItem>> = ({
   time,
   description,
   image,
+  isEnded,
 }) => {
   return (
     <div
       className={cn(
-        'flex items-center gap-5 lg:flex-col lg:text-center',
+        'relative flex items-center gap-5 lg:flex-col lg:text-center',
         className,
+        !isEnded
+          ? 'after:absolute after:-bottom-10 after:left-[47px] after:h-8 after:w-0.5 after:bg-black md:after:-bottom-12 lg:after:hidden'
+          : '',
       )}
     >
       <div

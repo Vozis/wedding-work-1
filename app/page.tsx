@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import StartSection from '@/containers/start-section';
 import InviteSection from '@/containers/invite-section';
@@ -8,11 +10,18 @@ import LocationSection from '@/containers/location-section';
 import DetailsSection from '@/containers/details-section';
 import ImagesSection from '@/containers/images-section';
 import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
+import PageLoader from '@/components/loaders/page-loader';
+import { Suspense, useEffect, useState } from 'react';
 
-const DynamicStartSection = dynamic(
-  () => import('@/containers/start-section'),
-  { ssr: false },
+const DynamicCloseSection = dynamic(() => import('@/containers/close-section'));
+const DynamicScheduleSection = dynamic(
+  () => import('@/containers/schedule-section'),
+);
+const DynamicImageSection = dynamic(
+  () => import('@/containers/images-section'),
+);
+const DynamicClothesSection = dynamic(
+  () => import('@/containers/clothes-section'),
 );
 
 export default function Home() {
@@ -20,12 +29,12 @@ export default function Home() {
     <main className="min-h-screen">
       <StartSection />
       <InviteSection />
-      <ClothesSection />
-      <ScheduleSection />
+      <DynamicClothesSection />
+      <DynamicScheduleSection />
       <LocationSection />
       <DetailsSection />
-      <ImagesSection />
-      <CloseSection />
+      <DynamicImageSection />
+      <DynamicCloseSection />
     </main>
   );
 }

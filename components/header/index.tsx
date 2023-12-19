@@ -8,7 +8,7 @@ import { menuList } from '@/components/menu/constants';
 import dynamic from 'next/dynamic';
 import MobileMenu from '@/components/menu/mobile-menu';
 import HeaderMenu from '@/components/menu';
-import PlayButton from '@/components/player/play-button';
+import PlayButton from '@/components/player/controls/play-button';
 
 export default function Header() {
   return (
@@ -24,6 +24,7 @@ export default function Header() {
             'mr-12 h-8 w-8 after:h-8 after:w-8 after:border after:border-black md:mr-0'
           }
           itemClassName={'text-sm'}
+          itemPlayClass={'text-[12px] ml-0.5'}
         />
         <HeaderMenu />
       </div>

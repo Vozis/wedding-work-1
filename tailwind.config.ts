@@ -36,10 +36,18 @@ const config: Config = {
         7: '7',
         8: '8',
       },
+      animation: {
+        mount: 'fadeIn 1s ease-in-out',
+        unmount: 'fadeIn 1s ease-in-out',
+      },
       keyframes: {
-        fade: {
+        fadeIn: {
           from: { opacity: '0' },
           to: { opacity: '1' },
+        },
+        fadeOut: {
+          from: { opacity: '1' },
+          to: { opacity: '0' },
         },
         scaleIn: {
           '0%': {
