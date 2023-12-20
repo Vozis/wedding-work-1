@@ -43,17 +43,17 @@ export default function InviteSection() {
         <ImageBlock
           className={''}
           direction={'left'}
-          path={'/img/image-1.jpg'}
+          path={'/img/start/1.jpg'}
         />
         <ImageBlock
           className={'mt-16'}
           direction={'right'}
-          path={'/img/image-1.jpg'}
+          path={'/img/start/2.jpg'}
         />
         <ImageBlock
           className={'md:hidden lg:block'}
           direction={'left'}
-          path={'/img/image-1.jpg'}
+          path={'/img/start/3.jpg'}
         />
       </div>
     </AnimateSection>

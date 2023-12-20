@@ -21,17 +21,17 @@ export default function CloseSection() {
           <ImageBlock
             className={'mt-16 xl:mt-32'}
             direction={'left'}
-            path={'/img/image-1.jpg'}
+            path={'/img/start/1.jpg'}
           />
           <ImageBlock
             className={'xl:mt-16'}
             direction={'right'}
-            path={'/img/image-1.jpg'}
+            path={'/img/start/2.jpg'}
           />
           <ImageBlock
             className={'md:hidden xl:block'}
             direction={'left'}
-            path={'/img/image-1.jpg'}
+            path={'/img/start/3.jpg'}
           />
         </div>
       </div>
