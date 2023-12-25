@@ -2,11 +2,8 @@ import Title from '@/components/typography/title';
 import Description from '@/components/typography/description';
 import Divider from '@/components/divider';
 import ImageBlock from '@/components/image';
-import dynamic from 'next/dynamic';
-import { PlayerProvider } from '@/providers/player';
 import React from 'react';
 import AnimateSection from '@/components/animate/section';
-import { AnimatePresence } from 'framer-motion';
 
 export default function InviteSection() {
   return (

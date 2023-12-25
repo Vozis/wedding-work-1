@@ -1,8 +1,7 @@
 'use client';
 
 import { IMusicTrack } from '@/types/music';
-import React, { forwardRef, MutableRefObject } from 'react';
-import { SelectField } from '@/components/form/inputs/select';
+import React, { MutableRefObject } from 'react';
 
 interface IDisplayTrack {
   currentTrack: IMusicTrack;

@@ -1,12 +1,6 @@
-import styles from '@/components/header/header.module.scss';
 import React from 'react';
-import cn from 'clsx';
-import Image from 'next/image';
-import logoImage from '@/public/img/logo2.svg';
 import MenuList from '@/components/menu/menu-list';
 import { menuList } from '@/components/menu/constants';
-import Link from 'next/link';
-import Button from '@/components/buttons/main-button';
 import LinkButton from '@/components/buttons/link-button';
 
 type Props = {

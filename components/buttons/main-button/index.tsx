@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import cn from 'clsx';
 import { IButton } from '@/components/buttons/main-button/button.interface';
-import Link from 'next/link';
 
 const Button: FC<IButton> = ({
   path = '/',

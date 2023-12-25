@@ -1,9 +1,7 @@
 'use client';
 
-import { forwardRef, useState } from 'react';
+import { forwardRef } from 'react';
 import cn from 'clsx';
-import { errorCatch } from '@/utils/errorCatch';
-import { IField } from '@/components/form/inputs/input/input.types';
 import { ISelectField } from '@/components/form/inputs/select/select.types';
 
 export const SelectField = forwardRef<HTMLSelectElement, ISelectField>(

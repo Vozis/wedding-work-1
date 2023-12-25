@@ -1,5 +1,4 @@
-import {IScheduleItem} from '@/components/lists/schedule-list/schedule-item';
-
+import { IScheduleItem } from '@/components/lists/schedule-list/schedule-item';
 
 export const scheduleList: IScheduleItem[] = [
   {

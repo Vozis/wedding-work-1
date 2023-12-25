@@ -1,8 +1,7 @@
 'use client';
 
-import { forwardRef, useState } from 'react';
+import { forwardRef } from 'react';
 import cn from 'clsx';
-import { errorCatch } from '@/utils/errorCatch';
 import { IField } from '@/components/form/inputs/input/input.types';
 
 export const RadioField = forwardRef<HTMLInputElement, IField>(

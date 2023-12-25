@@ -1,9 +1,4 @@
-import {
-  components,
-  DropdownIndicatorProps,
-  IndicatorSeparatorProps,
-} from 'react-select';
-import { MdKeyboardArrowDown } from 'react-icons/md';
+import { IndicatorSeparatorProps } from 'react-select';
 
 export const CustomIndicatorSeparator = ({
   innerProps,

@@ -1,16 +1,14 @@
 'use client';
 
 import styles from '@/components/menu/mobile-menu/mobileMenu.module.scss';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import BurgerMenu from '@/components/menu/burger';
-import { useLockedBody, useMediaQuery } from 'usehooks-ts';
+import { useLockedBody } from 'usehooks-ts';
 import MenuList from '@/components/menu/menu-list';
 import cn from 'clsx';
 import { menuList } from '@/components/menu/constants';
-import Link from 'next/link';
 import Image from 'next/image';
 import logoImage from '@/public/img/logo2.svg';
-import Button from '@/components/buttons/main-button';
 import LinkButton from '@/components/buttons/link-button';
 
 type Props = {

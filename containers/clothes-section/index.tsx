@@ -1,5 +1,3 @@
-import SuperTitle from '@/components/typography/super-title';
-import Player from '@/components/player';
 import Description from '@/components/typography/description';
 import Title from '@/components/typography/title';
 import Subtitle from '@/components/typography/subtitle';

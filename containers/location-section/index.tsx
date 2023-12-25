@@ -1,4 +1,3 @@
-import Title from '@/components/typography/title';
 import Location from '@/components/location';
 
 export default function LocationSection() {

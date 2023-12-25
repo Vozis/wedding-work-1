@@ -6,7 +6,6 @@ import Description from '@/components/typography/description';
 import Image from 'next/image';
 
 import arrow from '@/public/img/Arrow.svg';
-import { useMediaQuery } from 'usehooks-ts';
 import dynamic from 'next/dynamic';
 
 const DynamicPlayer = dynamic(() => import('@/components/player'), {

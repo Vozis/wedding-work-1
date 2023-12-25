@@ -1,8 +1,7 @@
 import { FC, PropsWithChildren } from 'react';
 import cn from 'clsx';
-import description from '@/components/typography/description';
-import Subtitle from '@/components/typography/subtitle';
 import Description from '@/components/typography/description';
+import Subtitle from '@/components/typography/subtitle';
 import Divider from '@/components/divider';
 
 export interface IDetailsItem {

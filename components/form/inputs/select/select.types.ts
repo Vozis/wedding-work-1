@@ -1,5 +1,4 @@
 import { IFieldProps } from '@/components/form/inputs/input/input.types';
-import { ControllerRenderProps } from 'react-hook-form';
 import { Options } from 'react-select';
 import { SelectHTMLAttributes } from 'react';
 

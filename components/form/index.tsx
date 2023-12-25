@@ -1,7 +1,7 @@
 'use client';
 
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IGetGuestInfo } from '@/components/form/form.types';
 import Button from '@/components/buttons/main-button';
 import { InputField } from '@/components/form/inputs/input';
@@ -10,12 +10,8 @@ import { ReactSelectField } from '@/components/form/inputs/react-select';
 import { alcoholItems } from '@/libs/alohol';
 import { foodItems } from '@/libs/food';
 import { RadioField } from '@/components/form/inputs/radio';
-import { SelectField } from '@/components/form/inputs/select';
-import dynamic from 'next/dynamic';
 import cn from 'clsx';
-import axios from 'axios';
 import SentBlock from '@/components/form/sent-block';
-import { useElementSize } from 'usehooks-ts';
 import useResizeObserver from 'use-resize-observer';
 import FormLoader from '@/components/loaders/form-loader';
 import { AnimatePresence, motion, Variants } from 'framer-motion';

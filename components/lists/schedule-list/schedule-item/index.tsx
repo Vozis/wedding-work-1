@@ -1,6 +1,5 @@
 import { FC, PropsWithChildren } from 'react';
 import cn from 'clsx';
-import Image from 'next/image';
 
 export interface IScheduleItem {
   title: string;

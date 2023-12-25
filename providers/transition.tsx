@@ -1,5 +1,4 @@
-import { AnimatePresence, backInOut, motion } from 'framer-motion';
-import { useRouter } from 'next/router';
+import { AnimatePresence } from 'framer-motion';
 import React, { FC, PropsWithChildren } from 'react';
 
 const TransitionProvider: FC<

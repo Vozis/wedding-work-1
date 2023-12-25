@@ -1,8 +1,6 @@
 'use client';
 
 import { useMediaQuery } from 'usehooks-ts';
-import MobileMenu from '@/components/menu/mobile-menu';
-import DesktopMenu from '@/components/menu/desktop-menu';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 

@@ -1,5 +1,3 @@
-import styles from '@/components/header/header.module.scss';
-
 export default function Footer() {
   return (
     <footer

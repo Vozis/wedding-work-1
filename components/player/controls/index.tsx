@@ -1,18 +1,8 @@
 'use client';
 
-import { FaPlay } from 'react-icons/fa';
-import React, {
-  forwardRef,
-  MutableRefObject,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
-import { FaPause } from 'react-icons/fa6';
+import React, { MutableRefObject, useCallback, useEffect, useRef } from 'react';
 import cn from 'clsx';
 import { usePlayer } from '@/hooks/usePlayer';
-import { useSelect } from '@material-tailwind/react';
 import PlayButton from '@/components/player/controls/play-button';
 
 interface IControls extends React.HTMLAttributes<HTMLButtonElement> {

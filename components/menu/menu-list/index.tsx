@@ -1,7 +1,5 @@
-import styles from '@/components/header/header.module.scss';
 import React from 'react';
 import cn from 'clsx';
-import Button from '@/components/buttons/main-button';
 import { IMenu } from '@/components/menu/menu.types';
 import MenuItem from '@/components/menu/menu-item';
 

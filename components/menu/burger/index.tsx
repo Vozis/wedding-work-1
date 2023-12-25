@@ -1,6 +1,6 @@
 'use client';
 import cn from 'clsx';
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import styles from './burger.module.scss';
 
 const BurgerMenu: FC<

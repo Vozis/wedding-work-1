@@ -3,18 +3,21 @@ import cn from 'clsx';
 
 export interface IClothesItem {
   title: string;
-  index?: number
+  index?: number;
   className?: string;
 }
 
 const ClothesItem: FC<PropsWithChildren<IClothesItem>> = ({
   className,
   title,
-  index
+  index,
 }) => {
   return (
     <div
-      className={cn('text-xl flex gap-2 xl:text-4xl lg:text-2xl font-medium', className)}
+      className={cn(
+        'flex gap-2 text-xl font-medium lg:text-2xl xl:text-4xl',
+        className,
+      )}
     >
       {index && <span className={'inline-block w-3'}>{index}.</span>}
       <span>{title}</span>

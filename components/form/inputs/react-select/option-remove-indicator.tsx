@@ -1,6 +1,5 @@
 import { MultiValueRemoveProps } from 'react-select';
 import { MdOutlineClear } from 'react-icons/md';
-import { CSSProperties } from 'react';
 
 export const CustomOptionRemoveIndicator = (props: MultiValueRemoveProps) => {
   const {

@@ -1,4 +1,4 @@
-import Select, { components, DropdownIndicatorProps } from 'react-select';
+import { components, DropdownIndicatorProps } from 'react-select';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 
 export const CustomDropdownIndicator = (props: DropdownIndicatorProps) => {

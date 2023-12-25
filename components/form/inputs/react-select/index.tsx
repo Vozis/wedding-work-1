@@ -7,8 +7,8 @@ import { FC, useEffect, useState } from 'react';
 import Select, { OnChangeValue } from 'react-select';
 import makeAnimated from 'react-select/animated';
 import {
-  ISelect,
   IOption,
+  ISelect,
 } from '@/components/form/inputs/react-select/select.types';
 import { errorCatch } from '@/utils/errorCatch';
 import { v4 as uuidv4 } from 'uuid';

@@ -1,12 +1,5 @@
-import styles from '@/components/header/header.module.scss';
 import Logo from '@/components/logo';
-import DesktopMenu from '@/components/menu/desktop-menu';
-import MenuList from '@/components/menu/menu-list';
-import { useMediaQuery } from 'usehooks-ts';
-import React, { useState } from 'react';
-import { menuList } from '@/components/menu/constants';
-import dynamic from 'next/dynamic';
-import MobileMenu from '@/components/menu/mobile-menu';
+import React from 'react';
 import HeaderMenu from '@/components/menu';
 import PlayButton from '@/components/player/controls/play-button';
 

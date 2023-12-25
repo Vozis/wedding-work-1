@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'clsx';
-import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { Variants } from 'framer-motion';
 
 interface ISentBlock extends React.HTMLAttributes<HTMLDivElement> {
   nam?: string;

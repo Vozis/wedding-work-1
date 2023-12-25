@@ -1,14 +1,11 @@
 'use client';
 
-import React, { useContext, useRef, useState } from 'react';
-import { PlayerContext } from '@/providers/player';
-import { usePlayer } from '@/hooks/usePlayer';
+import React, { useRef, useState } from 'react';
 import ProgressBar from '@/components/player/progress-bar';
 import DisplayTrack from '@/components/player/display-track';
 import cn from 'clsx';
 import { IMusicTrack } from '@/types/music';
 import { musicTracks } from '@/libs/music';
-import ReactPlayer from 'react-player';
 import Controls from '@/components/player/controls';
 
 interface IPlayer extends React.HTMLAttributes<HTMLDivElement> {}

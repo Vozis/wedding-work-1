@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'clsx';
 import cat from '@/public/img/cat.svg';
 import Image from 'next/image';
-import { AnimatePresence, motion, Variants } from 'framer-motion';
+import { Variants } from 'framer-motion';
 
 const variants: Variants = {
   out: {

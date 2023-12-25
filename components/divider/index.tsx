@@ -1,6 +1,8 @@
 import React from 'react';
 
-export default function Divider({className}: React.HTMLAttributes<HTMLDivElement>) {
+export default function Divider({
+  className,
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <svg
       className={className}
