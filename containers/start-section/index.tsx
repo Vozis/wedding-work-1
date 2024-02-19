@@ -7,6 +7,15 @@ import Image from 'next/image';
 
 import arrow from '@/public/img/Arrow.svg';
 import dynamic from 'next/dynamic';
+import { Suspense, useEffect, useState } from 'react';
+import Loading from '@/app/loading';
+
+import MobileBg from '@/public/img/start/mobile.jpg';
+import Bg1 from '@/public/img/start/1.jpg';
+import Bg2 from '@/public/img/start/2.jpg';
+import Bg3 from '@/public/img/start/3.jpg';
+import Bg4 from '@/public/img/start/4.jpg';
+import myImageLoader from '@/utils/loader';
 
 const DynamicPlayer = dynamic(() => import('@/components/player'), {
   ssr: false,
@@ -15,6 +24,7 @@ const DynamicPlayer = dynamic(() => import('@/components/player'), {
 export default function StartSection() {
   return (
     <section
+      id={'#inviteSection'}
       className={'relative flex pb-5 md:justify-center'}
       style={{
         minHeight: 'calc(100vh - 3rem)',
@@ -45,6 +55,8 @@ export default function StartSection() {
             style={{
               objectFit: 'cover',
             }}
+            // loader={myImageLoader}
+            sizes={'100vw, (max-width: 768px) 25vw'}
           />
         </div>
         <div className={'relative'}>
@@ -56,6 +68,7 @@ export default function StartSection() {
             style={{
               objectFit: 'cover',
             }}
+            sizes={'100vw, (max-width: 768px) 25vw'}
           />
         </div>
         <div className={'relative'}>
@@ -67,6 +80,7 @@ export default function StartSection() {
             style={{
               objectFit: 'cover',
             }}
+            sizes={'100vw, (max-width: 768px) 25vw'}
           />
         </div>
         <div className={'relative'}>
@@ -78,6 +92,7 @@ export default function StartSection() {
             style={{
               objectFit: 'cover',
             }}
+            sizes={'100vw, (max-width: 768px) 25vw'}
           />
         </div>
       </div>

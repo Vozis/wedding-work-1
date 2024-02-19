@@ -17,12 +17,9 @@ type Props = {
 
 export default function MobileMenu({ content }: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
   useLockedBody(isMenuOpen, 'root');
-
   const handleScroll = (e: any) => {
     e.preventDefault();
-
     setIsMenuOpen(!isMenuOpen);
 
     const href = e.currentTarget.href;
@@ -37,7 +34,7 @@ export default function MobileMenu({ content }: Props) {
       top:
         elem?.getBoundingClientRect().top -
         document.body.getBoundingClientRect().top -
-        70,
+        100,
     });
   };
 

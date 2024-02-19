@@ -6,7 +6,6 @@ import Footer from '@/components/footer';
 import { mirra, novelist } from '@/libs/fonts';
 import React, { Suspense } from 'react';
 import Providers from '@/providers';
-import PageLoader from '@/components/loaders/page-loader';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -133,11 +132,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={mirra.className}>
-        <Providers>
-          <Header />
-          {children}
-          <Footer />
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

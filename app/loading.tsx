@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Loading() {
-  return <div className={'text-black'}>Loading...</div>;
+  return <h2>Loading...</h2>;
 }

@@ -41,11 +41,13 @@ export default function ClothesSection() {
             <Image
               src={'/img/clothes/clothes-man-1.jpeg'}
               alt={'Image'}
+              loading={'lazy'}
               fill
               style={{
                 objectFit: 'cover',
                 filter: 'saturate(0%)',
               }}
+              sizes={'50vw, (max-width:767px) 25vw'}
             />
           </div>
           <div className={'relative h-full w-full'}>
@@ -57,28 +59,33 @@ export default function ClothesSection() {
                 objectFit: 'cover',
                 filter: 'saturate(0%)',
               }}
+              sizes={'50vw, (max-width:767px) 25vw'}
             />
           </div>
           <div className={'relative h-full w-full'}>
             <Image
               src={'/img/clothes/clothes-man-3.jpeg'}
               alt={'Image'}
+              loading={'lazy'}
               fill
               style={{
                 objectFit: 'cover',
                 filter: 'saturate(0%)',
               }}
+              sizes={'50vw, (max-width:767px) 25vw'}
             />
           </div>
           <div className={'relative h-full w-full'}>
             <Image
               src={'/img/clothes/clothes-man-4.jpeg'}
               alt={'Image'}
+              loading={'lazy'}
               fill
               style={{
                 objectFit: 'cover',
                 filter: 'saturate(0%)',
               }}
+              sizes={'50vw, (max-width:767px) 25vw'}
             />
           </div>
         </div>
@@ -97,22 +104,26 @@ export default function ClothesSection() {
               <Image
                 src={'/img/clothes/clothes-woman-1.webp'}
                 alt={'Image'}
+                loading={'lazy'}
                 fill
                 style={{
                   objectFit: 'cover',
                   filter: 'saturate(0%)',
                 }}
+                sizes={'50vw, (max-width:767px) 20vw'}
               />
             </div>
             <div className={'relative h-full w-full'}>
               <Image
                 src={'/img/clothes/clothes-woman-2.jpeg'}
                 alt={'Image'}
+                loading={'lazy'}
                 fill
                 style={{
                   objectFit: 'cover',
                   filter: 'saturate(0%)',
                 }}
+                sizes={'50vw, (max-width:767px) 20vw'}
               />
             </div>
           </div>
@@ -121,33 +132,39 @@ export default function ClothesSection() {
               <Image
                 src={'/img/clothes/clothes-woman-3.jpeg'}
                 alt={'Image'}
+                loading={'lazy'}
                 fill
                 style={{
                   objectFit: 'cover',
                   filter: 'saturate(0%)',
                 }}
+                sizes={'50vw, (max-width:767px) 20vw'}
               />
             </div>
             <div className={'relative h-full w-full'}>
               <Image
                 src={'/img/clothes/clothes-woman-4.jpeg'}
                 alt={'Image'}
+                loading={'lazy'}
                 fill
                 style={{
                   objectFit: 'cover',
                   filter: 'saturate(0%)',
                 }}
+                sizes={'50vw, (max-width:767px) 20vw'}
               />
             </div>
             <div className={'relative h-full w-full'}>
               <Image
                 src={'/img/clothes/clothes-woman-5.webp'}
                 alt={'Image'}
+                loading={'lazy'}
                 fill
                 style={{
                   objectFit: 'cover',
                   filter: 'saturate(0%)',
                 }}
+                sizes={'50vw, (max-width:767px) 20vw'}
               />
             </div>
           </div>

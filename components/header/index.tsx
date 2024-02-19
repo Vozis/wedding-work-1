@@ -2,6 +2,8 @@ import Logo from '@/components/logo';
 import React from 'react';
 import HeaderMenu from '@/components/menu';
 import PlayButton from '@/components/player/controls/play-button';
+import Link from 'next/link';
+import LinkButton from '@/components/buttons/link-button';
 
 export default function Header() {
   return (

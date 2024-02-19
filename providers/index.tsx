@@ -1,8 +1,11 @@
-'use client';
-
 import React from 'react';
 import { PlayerProvider } from '@/providers/player';
+import TransitionProvider from '@/providers/transition';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
-  return <PlayerProvider>{children}</PlayerProvider>;
+  return (
+    // <TransitionProvider>
+    <PlayerProvider>{children}</PlayerProvider>
+    // </TransitionProvider>
+  );
 }
