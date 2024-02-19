@@ -77,13 +77,13 @@ export default function Home() {
             opacity: 0,
             transition: {
               duration: 1,
-              delay: 2,
+              delay: 1.5,
             },
           }}
           className="fixed inset-0 z-[10000] flex flex-1 items-center justify-center bg-white"
         >
           <motion.div
-            // key={'image'}
+            key={'image'}
             initial={{
               opacity: 0,
             }}
@@ -94,9 +94,6 @@ export default function Home() {
                 duration: 1,
               },
             }}
-            // exit={{
-            //   opacity: 0,
-            // }}
           >
             <Image
               priority
@@ -116,6 +113,7 @@ export default function Home() {
             opacity: 1,
             transition: {
               duration: 1,
+              delay: 0.5,
             },
           }}
         >
