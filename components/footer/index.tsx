@@ -1,11 +1,13 @@
+import CloseSection from '@/containers/close-section';
+
 export default function Footer() {
   return (
     <footer
       className={
-        'flex h-12 items-center justify-center border-t border-black px-3 md:mt-12'
+        'mt-10 flex items-center justify-center border-t border-black md:mt-12'
       }
     >
-      <p className={'font-mirra text-2xl'}>До скорой встречи</p>
+      <CloseSection />
     </footer>
   );
 }

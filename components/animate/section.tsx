@@ -6,14 +6,14 @@ interface IAnimationSection extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const variants: Variants = {
-  out: {
+  initial: {
     opacity: 0,
     y: 40,
     transition: {
       duration: 0.5,
     },
   },
-  in: {
+  animate: {
     opacity: 1,
     y: 0,
     transition: {
@@ -37,10 +37,10 @@ export default function AnimateSection({
         key={id}
         id={id}
         variants={variants}
-        whileInView="in"
+        whileInView="animate"
         viewport={{ once: true, amount: 'some' }}
-        initial="out"
-        exit="out"
+        initial="initial"
+        layout
       >
         {children}
       </motion.section>

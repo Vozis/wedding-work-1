@@ -126,7 +126,7 @@ export function Form(props: FormProps) {
             className={cn('flex w-full flex-col gap-6')}
           >
             <Description>
-              Пожалуйста, Скажите нам, готовы вы прийти и что будете из меню
+              Пожалуйста, Скажите нам, готовы ли вы прийти и что будете из меню:
             </Description>
             <div className={'flex flex-col gap-5'}>
               <div className={'flex items-start gap-3 '}>
@@ -200,6 +200,11 @@ export function Form(props: FormProps) {
                 />
               </div>
             </div>
+            <Description>
+              Наш праздник имеет формат 18+, поэтому просим заранее
+              предусмотреть с кем останутся ваши детки, пока вы будете отдыхать
+              на празднике
+            </Description>
             <Button type={'submit'} className={'w-64 self-center'}>
               Отправить информацию
             </Button>

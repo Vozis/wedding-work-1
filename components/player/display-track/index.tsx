@@ -41,8 +41,8 @@ export default function DisplayTrack({
         onEnded={onEnded}
       />
       <div className={'text-center text-white'}>
-        <p className={'text-xl font-bold'}>{currentTrack.title}</p>
-        <p>{currentTrack.author}</p>
+        {/*<p className={'text-xl font-bold'}>{currentTrack.title}</p>*/}
+        {/*<p>{currentTrack.author}</p>*/}
       </div>
     </div>
   );

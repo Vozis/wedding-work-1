@@ -1,7 +1,9 @@
 import { FC, PropsWithChildren } from 'react';
 import cn from 'clsx';
+import { AnimationProps } from 'framer-motion';
+import { motion } from 'framer-motion';
 
-export interface IScheduleItem {
+export interface IScheduleItem extends AnimationProps {
   title: string;
   description: string;
   time: string;
@@ -9,6 +11,21 @@ export interface IScheduleItem {
   image: string;
   isEnded?: boolean;
 }
+
+const fadeInVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: 'easeInOut',
+    },
+  },
+};
 
 const ScheduleItem: FC<PropsWithChildren<IScheduleItem>> = ({
   className,
@@ -19,7 +36,14 @@ const ScheduleItem: FC<PropsWithChildren<IScheduleItem>> = ({
   isEnded,
 }) => {
   return (
-    <div
+    <motion.li
+      variants={fadeInVariants}
+      initial={'initial'}
+      whileInView={'animate'}
+      viewport={{
+        once: true,
+        margin: '0px 0px -50px 0px',
+      }}
       className={cn(
         'relative flex items-center gap-5 lg:flex-col lg:text-center',
         className,
@@ -45,7 +69,7 @@ const ScheduleItem: FC<PropsWithChildren<IScheduleItem>> = ({
         <p className={'text-xl font-semibold'}>{time}</p>
         <p className={'text-base'}>{description}</p>
       </div>
-    </div>
+    </motion.li>
   );
 };
 

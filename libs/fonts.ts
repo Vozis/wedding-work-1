@@ -19,3 +19,8 @@ export const harmony = localFont({
   src: '../public/fonts/Harmony.woff',
   variable: '--font-harmony',
 });
+
+export const amstelvar = localFont({
+  src: '../public/fonts/Amstelvar.woff2',
+  variable: '--font-amstelvar',
+});

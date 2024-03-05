@@ -2,6 +2,7 @@ import Title from '@/components/typography/title';
 import Description from '@/components/typography/description';
 import Divider from '@/components/divider';
 import Button from '@/components/buttons/main-button';
+import Link from 'next/link';
 
 export default function Location() {
   return (
@@ -13,12 +14,23 @@ export default function Location() {
       <Title title={'Место проведения'} className={'text-center'} />
       <Divider />
       <Description>
-        Особняк просто шик, не хуже Петрвоского. Добираемся своим ходом,Метро 15
-        минут дойдете, там плитки нет
+        Историческая Усадьба А.И. Путилова на Крестовском острове с собственной
+        гранитной набережной и причалом на берегу реки Малой Невки, окружена
+        романтичными набережными, позволит соприкоснуться с частичкой истории
+        «северной столицы»
       </Description>
-      <Button type={'submit'} className={'absolute -bottom-5 w-44'}>
+      <Link
+        href={'https://yandex.ru/maps/-/CDFUuQ-U'}
+        target={'_blank'}
+        className={
+          'absolute -bottom-5 flex w-44 items-center justify-center rounded-xl bg-black px-5 py-2 text-white'
+        }
+      >
         Открыть карту
-      </Button>
+      </Link>
+      {/*<Button type={'submit'} className={'absolute -bottom-5 w-44'}>*/}
+      {/*  Открыть карту*/}
+      {/*</Button>*/}
     </div>
   );
 }

@@ -1,8 +1,9 @@
 import Location from '@/components/location';
+import AnimateSection from '@/components/animate/section';
 
 export default function LocationSection() {
   return (
-    <section
+    <AnimateSection
       id={'locationSection'}
       className={'mt-12 px-12 py-24 lg:px-40 lg:py-40'}
       style={{
@@ -12,6 +13,6 @@ export default function LocationSection() {
       }}
     >
       <Location />
-    </section>
+    </AnimateSection>
   );
 }

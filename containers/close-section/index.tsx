@@ -1,48 +1,56 @@
-import Title from '@/components/typography/title';
-import Form from '@/components/form';
-import Image from 'next/image';
-
+import Location from '@/components/location';
+import Description from '@/components/typography/description';
 import logo2 from '@/public/img/logo2.svg';
-import ImageBlock from '@/components/image';
-import AnimateSection from '@/components/animate/section';
+import Image from 'next/image';
+import Link from 'next/link';
+import { MdWhatsapp } from 'react-icons/md';
+import { FaWhatsapp, FaTelegram } from 'react-icons/fa';
+import { BiLogoTelegram, BiLogoWhatsapp } from 'react-icons/bi';
 
 export default function CloseSection() {
   return (
-    <AnimateSection
-      id={'closeSection'}
+    <div
       className={
-        'mt-12 flex flex-col items-center gap-4 px-5 md:items-start lg:mx-auto lg:mt-28 lg:max-w-screen-xl lg:gap-10'
+        'flex h-full w-full items-center justify-center px-12 py-10 lg:px-40'
       }
+      style={{
+        background: `linear-gradient(0deg, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.33) 100%), url('/img/close.webp'), lightgray 50% / cover no-repeat`,
+        backgroundSize: 'cover',
+        filter: 'saturate(0%)',
+      }}
     >
-      <Title title={'Опрос'} className={'text-center md:text-left'} />
-      <div className={'md:flex md:gap-5 lg:gap-20'}>
-        <Form className={''} />
-        <div className={'hidden md:mx-auto md:flex md:justify-end md:gap-5'}>
-          <ImageBlock
-            className={'mt-16 xl:mt-32'}
-            direction={'left'}
-            path={'/img/start/1.jpg'}
-          />
-          <ImageBlock
-            className={'xl:mt-16'}
-            direction={'right'}
-            path={'/img/start/2.jpg'}
-          />
-          <ImageBlock
-            className={'md:hidden xl:block'}
-            direction={'left'}
-            path={'/img/start/3.jpg'}
-          />
+      <div
+        className={
+          'flex flex-col items-center justify-center gap-4 bg-white p-12 text-center lg:mx-auto lg:max-w-screen-md lg:px-20'
+        }
+      >
+        <Description>
+          На все вопросы, связанные с торжеством, с радостью ответит организатор
+          нашей свадьбы Светлана
+        </Description>
+        <div className={'flex flex-col items-center gap-5'}>
+          <Link href="tel:89218807347" className={'border-b border-black'}>
+            8-921-880-73-47
+          </Link>
+          <div className={'flex justify-center gap-5'}>
+            <Link href={'https://wa.me/79218807347'} target={'_blank'}>
+              <BiLogoWhatsapp className={'text-[35px]'} />
+            </Link>
+            <Link href={'https://wa.me/79218807347'} target={'_blank'}>
+              <BiLogoTelegram className={'text-[35px]'} />
+            </Link>
+          </div>
         </div>
+        <Image
+          className={'md:hidden'}
+          src={logo2}
+          alt={'Logo'}
+          style={{
+            margin: '2rem',
+          }}
+        />
+        <p className={'font-mirra text-2xl'}>До скорой встречи!</p>
       </div>
-      <Image
-        className={'md:hidden'}
-        src={logo2}
-        alt={'Logo'}
-        style={{
-          margin: '2rem',
-        }}
-      />
-    </AnimateSection>
+    </div>
   );
 }

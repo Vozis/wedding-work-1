@@ -6,25 +6,15 @@ import Description from '@/components/typography/description';
 import Image from 'next/image';
 
 import arrow from '@/public/img/Arrow.svg';
-import dynamic from 'next/dynamic';
-import { Suspense, useEffect, useState } from 'react';
-import Loading from '@/app/loading';
-
-import MobileBg from '@/public/img/start/mobile.jpg';
-import Bg1 from '@/public/img/start/1.jpg';
-import Bg2 from '@/public/img/start/2.jpg';
-import Bg3 from '@/public/img/start/3.jpg';
-import Bg4 from '@/public/img/start/4.jpg';
-import myImageLoader from '@/utils/loader';
-
-const DynamicPlayer = dynamic(() => import('@/components/player'), {
-  ssr: false,
-});
+// import dynamic from 'next/dynamic';
+// const DynamicPlayer = dynamic(() => import('@/components/player'), {
+//   ssr: false,
+// });
 
 export default function StartSection() {
   return (
     <section
-      id={'#inviteSection'}
+      id={'inviteSection'}
       className={'relative flex pb-5 md:justify-center'}
       style={{
         minHeight: 'calc(100vh - 3rem)',
@@ -34,9 +24,9 @@ export default function StartSection() {
         className={'absolute bottom-0 left-0 right-0 top-0 -z-1 md:hidden'}
         style={{
           background:
-            "linear-gradient(180deg, rgba(124, 124, 124, 0.00) 30.24%, rgba(0, 0, 0, 0.60) 67.66%, rgba(0, 0, 0, 0.78) 81.47%, #000 100%), url('/img/start/mobile.jpg'), lightgray 50% / cover no-repeat",
+            "linear-gradient(180deg, rgba(124, 124, 124, 0.00) 30%, rgba(0, 0, 0, 0.60) 60%, rgba(0, 0, 0, 0.9) 80%, #000 100%), url('/img/start/mobile.jpg'), lightgray 50% / cover no-repeat",
           backgroundSize: 'cover',
-          backgroundPosition: 'right bottom',
+          backgroundPosition: 'right top',
           borderRadius: '500px 0 0 0',
         }}
       />
@@ -115,10 +105,10 @@ export default function StartSection() {
         <div className={'flex flex-col items-center gap-5'}>
           <Player className={'flex flex-col items-center gap-5'} />
           <Description className={'text-center text-white'}>
-            Нажмите на PLay и листайте ниже погрузитесь в настроение нашего
+            Нажмите на Play и листайте ниже погрузитесь в настроение нашего
             торжества
           </Description>
-          <Image src={arrow} alt={'Arrow down'} />
+          <Image src={arrow} alt={'arrow down'} className={'animate-bounce'} />
         </div>
       </div>
     </section>
