@@ -4,20 +4,40 @@ import styles from './image.module.scss';
 
 interface IImage extends React.HTMLAttributes<HTMLDivElement> {
   path: string;
-  direction: 'left' | 'right';
+  isFigured?: boolean;
+  direction?: 'left' | 'right' | null;
 }
 
-export default function ImageBlock({ path, direction, className }: IImage) {
+export default function ImageBlock({
+  path,
+  direction = null,
+  className,
+  isFigured = false,
+  style,
+  ...rest
+}: IImage) {
+  console.log(isFigured);
+
   return (
     <div
       className={cn(
+        {
+          [styles.image]: isFigured,
+          [styles.image__left]: direction === 'left',
+          [styles.image__right]: direction === 'right',
+        },
         className,
-        styles.image,
-        direction === 'left' ? styles.image__left : styles.image__right,
       )}
-      style={{
-        backgroundImage: `url(${path})`,
-      }}
+      style={
+        style
+          ? style && {
+              backgroundImage: `url(${path})`,
+            }
+          : {
+              backgroundImage: `url(${path})`,
+            }
+      }
+      {...rest}
     ></div>
   );
 }

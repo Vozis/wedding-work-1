@@ -81,7 +81,8 @@ export function Form(props: FormProps) {
 
   return (
     <form
-      className={cn('flex w-full flex-col gap-6 lg:w-96', props.className)}
+      className={cn('flex flex-col gap-6', props.className)}
+      // className={cn('flex w-full flex-col gap-6 lg:w-96', props.className)}
       onSubmit={handleSubmit(onSubmit)}
     >
       <AnimatePresence>
