@@ -32,7 +32,7 @@ const Title: FC<ITitle> = ({
 }) => {
   return (
     <motion.h1
-      className={cn('text-5xl lg:text-3xl xl:text-5xl', className)}
+      className={cn('text-5xl lg:text-5xl xl:text-7xl', className)}
       initial={initial ? initial : isAnimated ? { y: 100, opacity: 0 } : {}}
       animate={animate ? animate : isAnimated ? { y: 0, opacity: 1 } : {}}
       transition={

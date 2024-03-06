@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.scss';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-import { mirra, novelist, amstelvar } from '@/libs/fonts';
+import { mirra, novelist, amstelvar, moniqa } from '@/libs/fonts';
 import React, { Suspense } from 'react';
 import Providers from '@/providers';
 
@@ -131,7 +131,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={amstelvar.className}>
+      <body className={moniqa.className}>
         <Providers>{children}</Providers>
       </body>
     </html>

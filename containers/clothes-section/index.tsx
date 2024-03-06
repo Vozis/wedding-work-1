@@ -16,7 +16,7 @@ export default function ClothesSection() {
     <AnimateSection
       id={'clothesSection'}
       className={
-        'mt-12 flex flex-col gap-4 lg:mx-auto lg:mt-20 lg:max-w-screen-xl'
+        'mt-12 flex flex-col gap-4 lg:mx-auto lg:mt-20 lg:max-w-screen-xl lg:gap-8'
       }
     >
       <Title
@@ -31,7 +31,10 @@ export default function ClothesSection() {
       </div>
       <article className={styles.clothesContent}>
         <div
-          className={cn('flex flex-col gap-3', styles.clothesContent__manInfo)}
+          className={cn(
+            'flex flex-col gap-3 lg:gap-6',
+            styles.clothesContent__manInfo,
+          )}
         >
           <Subtitle title={'Мужчины'} className={'self-start'} />
           <ClothesList items={clothesListMan} />

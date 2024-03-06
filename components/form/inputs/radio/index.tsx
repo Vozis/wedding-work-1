@@ -36,7 +36,7 @@ export const RadioField = forwardRef<HTMLInputElement, IField>(
         />
         <span
           className={cn(
-            'block cursor-pointer select-none rounded-lg border border-black text-center text-sm text-black peer-checked:bg-black peer-checked:text-white',
+            'text-md block cursor-pointer select-none rounded-lg border border-black text-center text-black peer-checked:bg-black peer-checked:text-white',
             labelClassName,
           )}
         >

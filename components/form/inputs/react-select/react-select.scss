@@ -8,7 +8,7 @@
     box-shadow: none !important;
     //min-width: 260px !important;
     width: 100% !important;
-    @apply px-2 py-2;
+    @apply px-2 py-2 text-xl;
 
     &--menu-is-open {
       border-color: black !important;
@@ -53,8 +53,9 @@
 
   &__multi-value__label {
     color: black !important;
-    font-size: 80% !important;
+    //font-size: 80% !important;
     margin-top: 3px !important;
+    @apply text-xl;
   }
 
   &__multi-value__remove {
@@ -69,6 +70,7 @@
   &__menu {
     background-color: white !important;
     color: #6b7280 !important;
+    @apply text-xl;
   }
 
   &__option {

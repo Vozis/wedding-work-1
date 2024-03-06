@@ -39,7 +39,7 @@ const ClothesItem: FC<PropsWithChildren<IClothesItem>> = ({
         margin: '0px 0px -50px 0px',
       }}
       className={cn(
-        'flex gap-2 text-xl font-medium lg:text-2xl xl:text-4xl',
+        'flex gap-2 text-2xl font-light lg:text-2xl xl:text-3xl',
         className,
       )}
     >

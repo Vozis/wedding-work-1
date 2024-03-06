@@ -41,15 +41,8 @@ export default function CloseSection() {
             </Link>
           </div>
         </div>
-        <Image
-          className={'md:hidden'}
-          src={logo2}
-          alt={'Logo'}
-          style={{
-            margin: '2rem',
-          }}
-        />
-        <p className={'font-mirra text-2xl'}>До скорой встречи!</p>
+        <Image className={'mt-2 md:hidden'} src={logo2} alt={'Logo'} />
+        <p className={'hidden text-2xl md:block'}>До скорой встречи!</p>
       </div>
     </div>
   );

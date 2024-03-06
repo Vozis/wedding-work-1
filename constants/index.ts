@@ -1,4 +1,4 @@
-import { IMenuItem } from '@/components/menu/menu.types';
+import { IMenuItem } from '@/types/types';
 
 export const menuList: IMenuItem[] = [
   {

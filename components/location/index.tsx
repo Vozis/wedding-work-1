@@ -23,14 +23,11 @@ export default function Location() {
         href={'https://yandex.ru/maps/-/CDFUuQ-U'}
         target={'_blank'}
         className={
-          'absolute -bottom-5 flex w-44 items-center justify-center rounded-xl bg-black px-5 py-2 text-white'
+          'absolute -bottom-5 flex w-44 items-center justify-center rounded-xl bg-black px-5 py-2 text-xl text-white'
         }
       >
         Открыть карту
       </Link>
-      {/*<Button type={'submit'} className={'absolute -bottom-5 w-44'}>*/}
-      {/*  Открыть карту*/}
-      {/*</Button>*/}
     </div>
   );
 }

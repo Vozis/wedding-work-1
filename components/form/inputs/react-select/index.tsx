@@ -70,7 +70,7 @@ export const ReactSelectField: FC<ISelect> = ({
   return (
     <div className={'w-full'}>
       <label>
-        <p className={'text-xl'}>{label}</p>
+        <p className={'text-3xl'}>{label}</p>
         {isMounted ? (
           <Select
             id={id}

@@ -27,7 +27,7 @@ const variants: Variants = {
 export default function SentBlock({ className, style }: ISentBlock) {
   return (
     <div className={cn('text-center', className)} style={style}>
-      <p>
+      <p className={'text-2xl'}>
         Результаты успешно приняты! Если рядом есть еще кто-то, кому нужно
         отправить свои предпочтения, можно сделать это через пару секунд :)
       </p>

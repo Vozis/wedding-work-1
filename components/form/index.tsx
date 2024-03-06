@@ -126,7 +126,8 @@ export function Form(props: FormProps) {
             className={cn('flex w-full flex-col gap-6')}
           >
             <Description>
-              Пожалуйста, Скажите нам, готовы ли вы прийти и что будете из меню:
+              Пожалуйста, сообщите нам, готовы ли вы прийти и что будете из
+              меню:
             </Description>
             <div className={'flex flex-col gap-5'}>
               <div className={'flex items-start gap-3 '}>
@@ -141,7 +142,7 @@ export function Form(props: FormProps) {
               <div className={'flex items-start gap-3 '}>
                 <span className={'w-6 text-5xl'}>2.</span>
                 <div className={'w-full'}>
-                  <p className={'text-xl'}>Подтвердите свое участие</p>
+                  <p className={'text-2xl'}>Подтвердите свое участие</p>
                   <div className={'grid grid-cols-2 gap-2 p-2'}>
                     <RadioField
                       {...register('confirmation', {
@@ -205,7 +206,7 @@ export function Form(props: FormProps) {
               предусмотреть с кем останутся ваши детки, пока вы будете отдыхать
               на празднике
             </Description>
-            <Button type={'submit'} className={'w-64 self-center'}>
+            <Button type={'submit'} className={'w-64 self-center text-xl'}>
               Отправить информацию
             </Button>
           </motion.div>

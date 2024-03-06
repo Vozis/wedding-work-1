@@ -24,3 +24,8 @@ export const amstelvar = localFont({
   src: '../public/fonts/Amstelvar.woff2',
   variable: '--font-amstelvar',
 });
+
+export const moniqa = localFont({
+  src: '../public/fonts/Moniqa.woff2',
+  variable: '--font-moniqa',
+});

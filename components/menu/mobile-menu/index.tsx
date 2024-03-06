@@ -6,10 +6,10 @@ import BurgerMenu from '@/components/menu/burger';
 import { useLockedBody } from 'usehooks-ts';
 import MenuList from '@/components/menu/menu-list';
 import cn from 'clsx';
-import { menuList } from '@/components/menu/constants';
 import Image from 'next/image';
 import logoImage from '@/public/img/logo2.svg';
 import LinkButton from '@/components/buttons/link-button';
+import { menuList } from '@/constants';
 
 type Props = {
   content?: React.ReactNode;
@@ -67,7 +67,7 @@ export default function MobileMenu({ content }: Props) {
           <LinkButton
             path={'#closeSection'}
             onClick={handleScroll}
-            className={'w-32'}
+            className={'w-32 text-2xl'}
           >
             Опрос
           </LinkButton>

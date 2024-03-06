@@ -15,3 +15,12 @@ export interface IPlayerContext {
   isPlaying: boolean;
   setIsPlaying: (t: boolean) => void;
 }
+
+export interface IMenuItem {
+  title: string;
+  path: string;
+}
+
+export interface IMenu {
+  items: IMenuItem[];
+}

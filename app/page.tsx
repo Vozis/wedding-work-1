@@ -68,7 +68,7 @@ export default function Home() {
       {!isContentLoaded ? (
         <PageLoader />
       ) : (
-        <motion.div
+        <motion.article
           key={'body'}
           initial={{
             opacity: 0,
@@ -94,11 +94,9 @@ export default function Home() {
             {/*<FormSection />*/}
             {/*<DynamicImageSection />*/}
             <DynamicFormSection />
-            {/*<CloseSection />*/}
-            {/*<DynamicCloseSection />*/}
           </main>
           <Footer />
-        </motion.div>
+        </motion.article>
       )}
     </AnimatePresence>
   );

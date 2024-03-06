@@ -25,7 +25,7 @@ const Description: FC<PropsWithChildren<IDescription>> = ({
 }) => {
   return (
     <motion.p
-      className={cn(className, 'font-novelist text-lg')}
+      className={cn(className, 'text-2xl font-light')}
       initial={initial ? initial : isAnimated ? { y: 100, opacity: 0 } : {}}
       animate={animate ? animate : isAnimated ? { y: 0, opacity: 1 } : {}}
       transition={

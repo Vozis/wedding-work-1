@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'clsx';
-import { IMenu } from '@/components/menu/menu.types';
 import MenuItem from '@/components/menu/menu-item';
+import { IMenu } from '@/types/types';
 
 export interface IMenuList extends React.HTMLAttributes<HTMLDivElement> {
   menu: IMenu;
@@ -18,7 +18,7 @@ export default function MenuList({
     <ul className={cn(className, '')}>
       {menu.items &&
         menu.items.length &&
-        menu.items.map(item => (
+        menu.items.map((item, index) => (
           <MenuItem
             item={item}
             clickHandler={clickHandler}

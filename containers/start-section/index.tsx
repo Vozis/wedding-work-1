@@ -6,14 +6,19 @@ import Description from '@/components/typography/description';
 import Image from 'next/image';
 
 import arrow from '@/public/img/Arrow.svg';
+import { useSectionInView } from '@/hooks/useSectionInView';
+import { useActiveSectionContext } from '@/providers/action-section-context';
 // import dynamic from 'next/dynamic';
 // const DynamicPlayer = dynamic(() => import('@/components/player'), {
 //   ssr: false,
 // });
 
 export default function StartSection() {
+  const { ref } = useSectionInView('Приглашение', 0.5);
+
   return (
     <section
+      ref={ref}
       id={'inviteSection'}
       className={'relative flex pb-5 md:justify-center'}
       style={{

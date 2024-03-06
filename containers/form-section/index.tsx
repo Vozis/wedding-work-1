@@ -18,7 +18,11 @@ export default function FormSection() {
       <Title title={'Опрос'} className={'text-center md:text-left'} />
       <div className={'md:flex md:gap-5 lg:gap-20'}>
         <Form className={''} />
-        <div className={'hidden md:mx-auto md:flex md:justify-end md:gap-5'}>
+        <div
+          className={
+            'hidden w-full border border-black md:mx-auto md:flex md:justify-end md:gap-5'
+          }
+        >
           <ImageBlock
             className={'mt-16 xl:mt-32'}
             direction={'left'}

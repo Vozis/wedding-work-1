@@ -1,13 +1,15 @@
 import React from 'react';
 import MenuList from '@/components/menu/menu-list';
-import { menuList } from '@/components/menu/constants';
 import LinkButton from '@/components/buttons/link-button';
+import { useActiveSectionContext } from '@/providers/action-section-context';
+import { menuList } from '@/constants';
 
 type Props = {
   content?: React.ReactNode;
 };
 
 export default function DesktopMenu({ content }: Props) {
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const handleScroll = (e: any) => {
     e.preventDefault();
 
@@ -33,8 +35,8 @@ export default function DesktopMenu({ content }: Props) {
         <MenuList
           menu={{ items: menuList }}
           className={'flex items-center gap-3'}
-          itemClassName={'text-sm'}
-          clickHandler={handleScroll}
+          itemClassName={''}
+          // clickHandler={handleScroll}
         />
         <LinkButton
           path={'#closeSection'}
