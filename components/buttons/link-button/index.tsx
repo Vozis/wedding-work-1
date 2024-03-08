@@ -16,7 +16,7 @@ const LinkButton: FC<ILinkButton> = ({
       href={path}
       onClick={onClick}
       className={cn(
-        'flex items-center justify-center rounded-xl bg-black px-5 py-2 text-white',
+        'flex items-center justify-center rounded-xl bg-black px-3 py-1 text-white',
         className,
         {
           'text-sm': size === 'small',

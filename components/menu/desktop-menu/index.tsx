@@ -39,8 +39,9 @@ export default function DesktopMenu({ content }: Props) {
           // clickHandler={handleScroll}
         />
         <LinkButton
+          size={'medium'}
           path={'#closeSection'}
-          className={'text-sm'}
+          className={'text-md'}
           onClick={handleScroll}
         >
           Опрос

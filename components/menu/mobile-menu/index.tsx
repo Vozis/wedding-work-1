@@ -85,7 +85,7 @@ export default function MobileMenu({ content }: Props) {
               setActiveSection('closeSection');
               setTimeOfLastClick(Date.now());
             }}
-            className={'w-32 text-2xl'}
+            className={'w-32 px-5 py-3 text-4xl'}
           >
             Опрос
           </LinkButton>
