@@ -2,6 +2,7 @@ import { FC, PropsWithChildren } from 'react';
 import cn from 'clsx';
 import { AnimationProps } from 'framer-motion';
 import { motion } from 'framer-motion';
+import styles from './item.module.scss';
 
 export interface IScheduleItem extends AnimationProps {
   title: string;
@@ -35,6 +36,10 @@ const ScheduleItem: FC<PropsWithChildren<IScheduleItem>> = ({
   image,
   isEnded,
 }) => {
+  const res = title.includes('Сбор') || title.includes('Завершение');
+
+  console.log(res);
+
   return (
     <motion.li
       variants={fadeInVariants}
@@ -45,7 +50,7 @@ const ScheduleItem: FC<PropsWithChildren<IScheduleItem>> = ({
         margin: '0px 0px -50px 0px',
       }}
       className={cn(
-        'relative flex items-center gap-5 lg:flex-col lg:text-center',
+        'relative flex items-center gap-5 md:gap-2 lg:flex-col lg:text-center',
         className,
         !isEnded
           ? 'after:absolute after:-bottom-10 after:left-[47px] after:h-8 after:w-0.5 after:bg-black md:after:-bottom-12 lg:after:hidden'
@@ -64,9 +69,11 @@ const ScheduleItem: FC<PropsWithChildren<IScheduleItem>> = ({
       >
         {/*<Image src={image} alt={'Image'}/>*/}
       </div>
-      <div className={'flex flex-col gap-3'}>
-        <p className={'text-2xl font-bold lg:text-4xl'}>{title}</p>
-        {/*<p className={'text-3xl font-bold lg:text-4xl'}>{time}</p>*/}
+      <div className={cn('flex flex-col gap-2 lg:gap-1', styles.item)}>
+        <p className={'text-3xl font-bold lg:text-3xl'}>{title}</p>
+        <p className={'text-4xl font-semibold lg:block lg:text-4xl'}>
+          {res ? time : ''}
+        </p>
         <p className={'text-xl font-light lg:text-2xl'}>{description}</p>
       </div>
     </motion.li>

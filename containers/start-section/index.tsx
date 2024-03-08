@@ -17,7 +17,7 @@ export default function StartSection() {
     <section
       ref={ref}
       id={'startSection'}
-      className={'relative flex pb-5 md:justify-center'}
+      className={'relative flex pb-5 sm:justify-center'}
       style={{
         minHeight: 'calc(100vh - 3rem)',
       }}
@@ -35,7 +35,7 @@ export default function StartSection() {
 
       <div
         className={
-          'absolute bottom-0 left-0 right-0 top-0 -z-1 hidden grid-cols-4 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:z-1 before:bg-gradient-to-t before:from-black/100 before:to-black/30  md:grid'
+          'absolute bottom-0 left-0 right-0 top-0 -z-1 hidden grid-cols-4 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:z-1 before:bg-gradient-to-t before:from-black/100 before:to-black/30  sm:grid'
         }
       >
         <div className={'relative'}>
@@ -94,13 +94,13 @@ export default function StartSection() {
           <SuperTitle
             title={'Илья'}
             className={
-              'text-right text-[8rem] leading-[4rem] s:text-[9rem] s:leading-[5rem] md:text-white'
+              'text-right text-[8rem] leading-[4rem] s:text-[9rem] s:leading-[5rem] sm:text-white'
             }
           />
           <SuperTitle
             title={'Анастасия'}
             className={
-              'block text-center text-[8rem] leading-[4rem] s:text-[9rem] s:leading-[5rem] md:text-white '
+              'block text-center text-[8rem] leading-[4rem] s:text-[9rem] s:leading-[5rem] sm:text-white '
             }
           />
         </div>

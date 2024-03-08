@@ -50,7 +50,7 @@ export default function MenuItem({
         href={item.path}
         onClick={handleScroll}
         className={cn(
-          'text-center text-5xl text-gray-600 md:text-lg',
+          'text-center text-5xl text-gray-600 sm:text-lg',
           className,
           {
             '!text-black': activeSection === item.path.slice(1),
