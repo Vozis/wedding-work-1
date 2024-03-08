@@ -16,7 +16,7 @@ export default function ImageBlock({
   style,
   ...rest
 }: IImage) {
-  console.log(isFigured);
+  // console.log(isFigured);
 
   return (
     <div

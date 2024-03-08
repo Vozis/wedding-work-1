@@ -40,7 +40,7 @@ export default function MenuItem({
         70,
     });
 
-    setActiveSection(item.title);
+    setActiveSection(item.path.slice(1));
     setTimeOfLastClick(Date.now());
   };
 
@@ -49,9 +49,13 @@ export default function MenuItem({
       <Link
         href={item.path}
         onClick={handleScroll}
-        className={cn('text-center text-5xl md:text-lg', className, {
-          'text-red': activeSection === item.title,
-        })}
+        className={cn(
+          'text-center text-5xl text-gray-600 md:text-lg',
+          className,
+          {
+            '!text-black': activeSection === item.path.slice(1),
+          },
+        )}
       >
         {item.title}
       </Link>

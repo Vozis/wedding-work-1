@@ -98,7 +98,7 @@ export default function ClothesSection() {
             styles.clothesContent__womanInfo,
           )}
         >
-          <Subtitle title={'Женщины'} className={'self-start'} />
+          <Subtitle title={'Девушки'} className={'self-start'} />
           <ClothesList items={clothesListWoman} />
         </div>
         <div className={cn('', styles.clothesContent__womanPhoto)}>

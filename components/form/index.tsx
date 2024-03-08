@@ -1,7 +1,7 @@
 'use client';
 
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Fragment, useRef } from 'react';
 import { IGetGuestInfo } from '@/components/form/form.types';
 import Button from '@/components/buttons/main-button';
 import { InputField } from '@/components/form/inputs/input';
@@ -19,19 +19,26 @@ import { AnimatePresence, motion, Variants } from 'framer-motion';
 export interface FormProps extends React.HTMLAttributes<HTMLFormElement> {}
 
 const variants: Variants = {
-  out: {
+  initial: {
     opacity: 0,
-    x: 20,
+    y: -20,
     transition: {
-      duration: 0.5,
+      duration: 2,
     },
   },
-  in: {
+  animate: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
-      duration: 0.5,
-      delay: 0.5,
+      duration: 2,
+      // delay: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: 20,
+    transition: {
+      duration: 2,
     },
   },
 };
@@ -39,7 +46,27 @@ const variants: Variants = {
 export function Form(props: FormProps) {
   const [isSent, setIsSent] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const { ref, width, height } = useResizeObserver<HTMLDivElement>();
+  // const { ref, width, height } = useResizeObserver<HTMLFormElement>();
+  const ref = useRef<HTMLFormElement>(null);
+  const [{ height, width }, setSize] = useState<{
+    width: number | undefined;
+    height: number | undefined;
+  }>({
+    width: undefined,
+    height: undefined,
+  });
+  const [{ currHeight, currWidth }, setCurrSize] = useState<{
+    currWidth: number | undefined;
+    currHeight: number | undefined;
+  }>({
+    currWidth: undefined,
+    currHeight: undefined,
+  });
+
+  useResizeObserver({
+    ref,
+    onResize: setSize,
+  });
 
   const {
     register,
@@ -64,6 +91,10 @@ export function Form(props: FormProps) {
   }, [isSent]);
 
   const onSubmit: SubmitHandler<IGetGuestInfo> = async data => {
+    setCurrSize({
+      currHeight: height,
+      currWidth: width,
+    });
     try {
       setIsLoading(true);
       await fetch('/api', {
@@ -71,8 +102,10 @@ export function Form(props: FormProps) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      setIsSent(true);
-      setIsLoading(false);
+      setTimeout(() => {
+        setIsSent(true);
+        setIsLoading(false);
+      }, 3000);
       reset();
     } catch (e) {
       console.log(e);
@@ -80,51 +113,101 @@ export function Form(props: FormProps) {
   };
 
   return (
-    <form
-      className={cn('flex flex-col gap-6', props.className)}
-      // className={cn('flex w-full flex-col gap-6 lg:w-96', props.className)}
-      onSubmit={handleSubmit(onSubmit)}
+    <div
+      style={{
+        height: `${currHeight}px`,
+        width: `${currWidth}px`,
+      }}
+      className={cn('overflow-hidden', props.className)}
     >
       <AnimatePresence>
         {isLoading ? (
           <motion.div
-            key={'loader'}
-            variants={variants}
-            animate="in"
-            initial="out"
-            exit="out"
+            className={'basis-full'}
+            key={'loading'}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                delay: 0.7,
+              },
+            }}
+            initial={{
+              opacity: 0,
+              x: -50,
+            }}
+            exit={{
+              opacity: 0,
+              x: 50,
+            }}
+            transition={{
+              duration: 0.7,
+              type: 'spring',
+            }}
           >
             <FormLoader
               style={{
-                height: `${height}px`,
-                width: `${width}px`,
+                height: `${currHeight}px`,
+                width: `${currWidth}px`,
               }}
             />
           </motion.div>
         ) : isSent ? (
           <motion.div
-            key={'sent'}
-            variants={variants}
-            animate="in"
-            initial="out"
-            exit="out"
+            className={'basis-full'}
+            key={'sender'}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                delay: 0.7,
+              },
+            }}
+            initial={{
+              opacity: 0,
+              x: -50,
+            }}
+            exit={{
+              opacity: 0,
+              x: 50,
+            }}
+            transition={{
+              duration: 0.7,
+              type: 'spring',
+            }}
           >
             <SentBlock
               style={{
-                height: `${height}px`,
-                width: `${width}px`,
+                height: `${currHeight}px`,
+                width: `${currWidth}px`,
               }}
             />
           </motion.div>
         ) : (
-          <motion.div
-            variants={variants}
-            animate="in"
-            initial="out"
-            exit="out"
-            key={'formBody'}
+          <motion.form
+            key={'form'}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                delay: 0.7,
+              },
+            }}
+            initial={{
+              opacity: 0,
+              x: -50,
+            }}
+            exit={{
+              opacity: 0,
+              x: 50,
+            }}
+            transition={{
+              duration: 0.7,
+              type: 'spring',
+            }}
             ref={ref}
-            className={cn('flex w-full flex-col gap-6')}
+            className={cn('flex w-full basis-full flex-col gap-6')}
+            onSubmit={handleSubmit(onSubmit)}
           >
             <Description>
               Пожалуйста, сообщите нам, готовы ли вы прийти и что будете из
@@ -207,13 +290,18 @@ export function Form(props: FormProps) {
               предусмотреть с кем останутся ваши детки, пока вы будете отдыхать
               на празднике
             </Description>
-            <Button type={'submit'} className={'w-64 self-center text-xl'}>
+            <Button
+              type={'submit'}
+              className={'w-64 self-center text-xl'}
+              // onClick={() => setSaveSizes(true)}
+              // onClick={() => resizeHandler()}
+            >
               Отправить информацию
             </Button>
-          </motion.div>
+          </motion.form>
         )}
       </AnimatePresence>
-    </form>
+    </div>
   );
 }
 

@@ -10,12 +10,17 @@ import Image from 'next/image';
 import logoImage from '@/public/img/logo2.svg';
 import LinkButton from '@/components/buttons/link-button';
 import { menuList } from '@/constants';
+import Logo from '@/components/logo';
+import Link from 'next/link';
+import { useActiveSectionContext } from '@/providers/action-section-context';
 
 type Props = {
   content?: React.ReactNode;
 };
 
 export default function MobileMenu({ content }: Props) {
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   useLockedBody(isMenuOpen, 'root');
   const handleScroll = (e: any) => {
@@ -57,7 +62,16 @@ export default function MobileMenu({ content }: Props) {
             [styles.menuOpen]: isMenuOpen,
           })}
         >
-          <Image src={logoImage} alt={'image'} className={'md:hidden'} />
+          <Link
+            href={'#startSection'}
+            onClick={e => {
+              handleScroll(e);
+              setActiveSection('startSection');
+              setTimeOfLastClick(Date.now());
+            }}
+          >
+            <Image src={logoImage} alt={'image'} className={'md:hidden'} />
+          </Link>
           <MenuList
             itemClassName={'md:text-xl'}
             className={'flex flex-col items-center gap-3 md:flex-row'}
@@ -66,7 +80,11 @@ export default function MobileMenu({ content }: Props) {
           />
           <LinkButton
             path={'#closeSection'}
-            onClick={handleScroll}
+            onClick={e => {
+              handleScroll(e);
+              setActiveSection('closeSection');
+              setTimeOfLastClick(Date.now());
+            }}
             className={'w-32 text-2xl'}
           >
             Опрос

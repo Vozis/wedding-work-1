@@ -1,23 +1,36 @@
+'use client';
+
 import React from 'react';
 import cn from 'clsx';
 import cat from '@/public/img/cat.svg';
 import Image from 'next/image';
-import { Variants } from 'framer-motion';
+import { Variants, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const variants: Variants = {
-  out: {
+  initial: {
     opacity: 0,
-    y: 40,
+    x: 20,
     transition: {
-      duration: 0.5,
+      duration: 1,
+      type: 'spring',
     },
   },
   in: {
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
-      duration: 0.5,
+      duration: 1,
       delay: 0.5,
+      type: 'spring',
+    },
+  },
+  exit: {
+    opacity: 0,
+    x: -20,
+    transition: {
+      duration: 1,
+      type: 'spring',
     },
   },
 };

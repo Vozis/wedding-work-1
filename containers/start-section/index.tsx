@@ -8,18 +8,15 @@ import Image from 'next/image';
 import arrow from '@/public/img/Arrow.svg';
 import { useSectionInView } from '@/hooks/useSectionInView';
 import { useActiveSectionContext } from '@/providers/action-section-context';
-// import dynamic from 'next/dynamic';
-// const DynamicPlayer = dynamic(() => import('@/components/player'), {
-//   ssr: false,
-// });
+import AnimateSection from '@/components/animate/section';
 
 export default function StartSection() {
-  const { ref } = useSectionInView('Приглашение', 0.5);
+  const { ref } = useSectionInView('startSection');
 
   return (
     <section
       ref={ref}
-      id={'inviteSection'}
+      id={'startSection'}
       className={'relative flex pb-5 md:justify-center'}
       style={{
         minHeight: 'calc(100vh - 3rem)',

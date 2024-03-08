@@ -64,9 +64,9 @@ const ScheduleItem: FC<PropsWithChildren<IScheduleItem>> = ({
       >
         {/*<Image src={image} alt={'Image'}/>*/}
       </div>
-      <div className={'flex flex-col'}>
-        <p className={'text-2xl lg:text-3xl'}>{title}</p>
-        <p className={'text-3xl font-bold lg:text-4xl'}>{time}</p>
+      <div className={'flex flex-col gap-3'}>
+        <p className={'text-2xl font-bold lg:text-4xl'}>{title}</p>
+        {/*<p className={'text-3xl font-bold lg:text-4xl'}>{time}</p>*/}
         <p className={'text-xl font-light lg:text-2xl'}>{description}</p>
       </div>
     </motion.li>

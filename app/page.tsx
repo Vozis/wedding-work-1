@@ -51,7 +51,7 @@ export default function Home() {
 
   useEffect(() => {
     const fn = () => {
-      console.log('all content loaded');
+      // console.log('all content loaded');
       setIsContentLoaded(true);
     };
 
@@ -84,6 +84,7 @@ export default function Home() {
           <Header />
           <main className="min-h-screen">
             <StartSection />
+            <InviteSection />
             <ClothesSection />
             {/*<ScheduleSection />*/}
             {/*<DynamicClothesSection />*/}

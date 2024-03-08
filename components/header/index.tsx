@@ -13,7 +13,9 @@ export default function Header() {
       }
     >
       <div
-        className={'m-auto flex max-w-screen-xl items-center justify-between'}
+        className={
+          'm-auto flex h-full max-w-screen-xl items-center justify-between'
+        }
       >
         <Logo />
         <div className={'flex items-center gap-2'}>

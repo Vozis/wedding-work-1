@@ -1,5 +1,6 @@
 import Location from '@/components/location';
 import AnimateSection from '@/components/animate/section';
+import { useSectionInView } from '@/hooks/useSectionInView';
 
 export default function LocationSection() {
   return (
