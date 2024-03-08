@@ -41,10 +41,10 @@ export default function SentBlock({ className, style }: ISentBlock) {
       // animate="in"
       // initial="out"
       // exit="exit"
-      className={cn(' text-center', className)}
+      className={cn('flex flex-col items-center justify-center', className)}
       style={style}
     >
-      <p className={'text-2xl'}>
+      <p className={'text-center text-2xl'}>
         Результаты успешно приняты! Если рядом есть еще кто-то, кому нужно
         отправить свои предпочтения, можно сделать это через пару секунд :)
       </p>

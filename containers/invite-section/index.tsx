@@ -14,9 +14,22 @@ export default function InviteSection() {
       }
     >
       <div
-        className={'flex flex-col items-center justify-center gap-4 md:gap-10'}
+        className={'flex flex-col items-center justify-center gap-4 md:gap-8'}
       >
         <Title title={'Дорогие гости'} className={'text-center'} />
+        <div
+          className={
+            'flex items-center justify-center gap-3 border-b border-black pb-2 md:pb-5'
+          }
+        >
+          <p className={'text-6xl font-bold'}>16</p>
+          <p
+            className={
+              'relative block after:absolute after:-left-1 after:-top-1.5 after:h-1.5 after:w-1.5 after:rounded-full after:bg-black'
+            }
+          />
+          <p className={'text-6xl font-bold'}>00</p>
+        </div>
         <div className={'flex items-center justify-center gap-3'}>
           <p className={'text-4xl font-bold'}>08</p>
           <p
@@ -31,15 +44,6 @@ export default function InviteSection() {
             }
           />
           <p className={'text-4xl font-bold'}>24</p>
-        </div>
-        <div className={'flex items-center justify-center gap-3'}>
-          <p className={'text-4xl font-bold'}>16</p>
-          <p
-            className={
-              'relative block after:absolute after:-left-1 after:-top-1.5 after:h-1.5 after:w-1.5 after:rounded-full after:bg-black'
-            }
-          />
-          <p className={'text-4xl font-bold'}>00</p>
         </div>
         <Divider className={''} />
         <Description className={'text-center '}>
