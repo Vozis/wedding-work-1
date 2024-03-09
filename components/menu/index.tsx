@@ -20,7 +20,7 @@ const DynamicDesktopMenu = dynamic(
 );
 
 export default function HeaderMenu() {
-  const isMobile = useMediaQuery('(max-width:425px)');
+  const isMobile = useMediaQuery('(max-width:500px)');
   const [isMounted, setIsMounted] = useState<boolean>(false);
 
   useEffect(() => setIsMounted(true), []);

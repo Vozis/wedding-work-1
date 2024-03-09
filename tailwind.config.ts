@@ -13,6 +13,7 @@ const config: Config = {
     extend: {
       screens: {
         s: '360px',
+        xm: '500px',
         custom: '1200px',
       },
       fontFamily: {

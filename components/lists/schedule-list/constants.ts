@@ -2,7 +2,7 @@ import { IScheduleItem } from '@/components/lists/schedule-list/schedule-item';
 
 export const scheduleList: IScheduleItem[] = [
   {
-    title: 'Сбор гостей',
+    title: 'Welcome',
     description:
       'Время пролетит незаметно за игристым и общением с другими гостями',
     time: '16:00',
