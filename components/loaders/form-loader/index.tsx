@@ -48,7 +48,7 @@ export default function FormLoader({
       style={style}
     >
       <Image src={cat} alt={'image'} width={150} height={150} />
-      <p className={'text-2xl'}>Пока идет загрузка, полюбуйтесь котиком :)</p>
+      <p className={'text-2xl'}>Пока идет загрузка, полюбуйтесь котиком )</p>
     </div>
   );
 }

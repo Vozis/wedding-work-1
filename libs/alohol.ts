@@ -21,8 +21,8 @@ export const alcoholItems: IOption[] = [
     label: 'Мартини',
   },
   {
-    value: 'Виски',
-    label: 'Виски',
+    value: 'Просекко',
+    label: 'Просекко',
   },
   {
     value: 'Без алкоголя',
