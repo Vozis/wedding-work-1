@@ -36,7 +36,7 @@ const ScheduleItem: FC<PropsWithChildren<IScheduleItem>> = ({
   image,
   isEnded,
 }) => {
-  const res = title.includes('Сбор') || title.includes('Завершение');
+  const res = title.includes('Welcome') || title.includes('Завершение');
 
   return (
     <motion.li

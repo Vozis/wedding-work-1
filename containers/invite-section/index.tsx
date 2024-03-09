@@ -10,7 +10,7 @@ export default function InviteSection() {
     <AnimateSection
       id={'inviteSection'}
       className={
-        'mt-12 block max-w-screen-xl gap-5 px-5 md:grid md:h-[27rem] md:grid-cols-[1fr,2fr] md:gap-12 lg:mx-auto lg:mt-28'
+        'mt-12 block max-w-screen-xl gap-5 px-5 md:grid md:min-h-[27rem] md:grid-cols-[1fr,2fr] md:gap-12 lg:mx-auto lg:mt-28'
       }
     >
       <div
@@ -46,9 +46,11 @@ export default function InviteSection() {
           <p className={'text-4xl font-bold'}>24</p>
         </div>
         <Divider className={''} />
-        <Description className={'text-center '}>
-          Приглашаем на торжество в мир роскоши и комфорта на самую лучшую
-          свадьбу ЕВЕР ФОРЕВЕР
+        <Description className={'text-center'}>
+          Один день в этом году будет для нас особенным и мы хотим провести его
+          в кругу близких и друзей. Наша свадьба без вас не будет такой
+          счастливой, уютной и веселой! Приглашаем отметить этот день вместе с
+          нами!
         </Description>
       </div>
       <div className={'hidden md:flex'}>

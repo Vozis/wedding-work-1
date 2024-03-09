@@ -25,8 +25,8 @@ export default function ClothesSection() {
       />
       <div className={'flex flex-col gap-3 px-5 lg:flex-row lg:gap-10'}>
         <Description>
-          Мы очень старались сделать праздник красивым и очень просим в своих
-          нарядах поддержать стилистику нашей свадьбы:
+          Мы старались сделать праздник красивым и очень просим в своих нарядах
+          поддержать стилистику нашей свадьбы:
         </Description>
       </div>
       <article className={styles.clothesContent}>
