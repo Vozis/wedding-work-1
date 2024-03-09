@@ -38,8 +38,6 @@ const ScheduleItem: FC<PropsWithChildren<IScheduleItem>> = ({
 }) => {
   const res = title.includes('Сбор') || title.includes('Завершение');
 
-  console.log(res);
-
   return (
     <motion.li
       variants={fadeInVariants}
