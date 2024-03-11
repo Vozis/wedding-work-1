@@ -210,8 +210,11 @@ export function Form(props: FormProps) {
             onSubmit={handleSubmit(onSubmit)}
           >
             <Description>
-              Пожалуйста, сообщите нам, готовы ли вы прийти и что будете из
-              меню:
+              <p>
+                Пожалуйста, сообщите нам, готовы ли вы прийти и что будете из
+                меню:
+              </p>
+              <b>(только для уверенных на 100%)</b>
             </Description>
             <div className={'flex flex-col gap-5'}>
               <div className={'flex items-start gap-3 '}>

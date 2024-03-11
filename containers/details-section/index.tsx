@@ -11,7 +11,7 @@ export default function DetailsSection() {
         'mt-12 flex flex-col gap-5 px-5 lg:mx-auto lg:mt-20 lg:max-w-screen-xl lg:gap-10'
       }
     >
-      <Title title={'Детали'} className={'text-center'} />
+      <Title title={'Детали'} className={''} />
       <DetailsList items={detailsList} />
     </AnimateSection>
   );

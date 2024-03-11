@@ -9,8 +9,4 @@ export const foodItems: IOption[] = [
     value: 'Рыба',
     label: 'Рыба',
   },
-  {
-    value: 'Веган',
-    label: 'Веган',
-  },
 ];
