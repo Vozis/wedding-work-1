@@ -11,7 +11,7 @@ export default function ScheduleSection() {
         'mt-12 flex flex-col gap-5 px-5 lg:mx-auto lg:mt-28 lg:max-w-screen-xl lg:gap-10'
       }
     >
-      <Title title={'Расписание'} className={'text-center md:text-left'} />
+      <Title title={'Программа дня'} className={'text-center md:text-left'} />
       <ScheduleList items={scheduleList} />
     </AnimateSection>
   );

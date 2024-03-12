@@ -44,7 +44,7 @@ export default function CloseSection() {
               <BiLogoWhatsapp className={'text-[35px]'} />
             </Link>
             <Link
-              href={'https://wa.me/79218807347'}
+              href={'https://t.me/@Serova_S_wedding'}
               target={'_blank'}
               className={'p-2'}
             >

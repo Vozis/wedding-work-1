@@ -7,6 +7,6 @@ export const clothesListMan: IClothesItem[] = [
 ];
 
 export const clothesListWoman: IClothesItem[] = [
-  { title: 'Черное платье' },
+  { title: 'Черное роскошное платье' },
   { title: 'Золотые / серебряные аксессуары' },
 ];

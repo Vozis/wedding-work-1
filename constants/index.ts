@@ -10,7 +10,7 @@ export const menuList: IMenuItem[] = [
     path: '#clothesSection',
   },
   {
-    title: 'Расписание',
+    title: 'Программа',
     path: '#scheduleSection',
   },
   {

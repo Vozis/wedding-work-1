@@ -10,11 +10,13 @@ export default function InviteSection() {
     <AnimateSection
       id={'inviteSection'}
       className={
-        'mt-12 block max-w-screen-xl gap-5 px-5 md:grid md:min-h-[27rem] md:grid-cols-[1fr,2fr] md:gap-12 lg:mx-auto lg:mt-28'
+        'mt-12 flex max-w-screen-xl flex-col gap-10 md:grid md:min-h-[27rem] md:grid-cols-[1fr,2fr] md:gap-12 lg:mx-auto lg:mt-28'
       }
     >
       <div
-        className={'flex flex-col items-center justify-center gap-4 md:gap-8'}
+        className={
+          'flex flex-col items-center justify-center gap-4 px-5 md:gap-8'
+        }
       >
         <Title title={'Дорогие гости'} className={'text-center'} />
         <div
@@ -45,13 +47,20 @@ export default function InviteSection() {
           />
           <p className={'text-4xl font-bold'}>24</p>
         </div>
-        <Divider className={''} />
         <Description className={'text-center'}>
           Один день в этом году будет для нас особенным и мы хотим провести его
           в кругу близких и друзей. Наша свадьба без вас не будет такой
           счастливой, уютной и веселой! Приглашаем отметить этот день вместе с
           нами!
         </Description>
+      </div>
+      <div className={'block h-80 md:hidden'}>
+        <ImageBlock
+          className={
+            'h-full w-full bg-cover bg-[center_top_-12rem] grayscale md:h-full'
+          }
+          path={'/img/invite/1.jpg'}
+        />
       </div>
       <div className={'hidden md:flex'}>
         <ImageBlock

@@ -118,7 +118,7 @@ export function Form(props: FormProps) {
         height: `${currHeight}px`,
         width: `${currWidth}px`,
       }}
-      className={cn('overflow-hidden', props.className)}
+      className={cn('', props.className)}
     >
       <AnimatePresence>
         {isLoading ? (
@@ -210,11 +210,8 @@ export function Form(props: FormProps) {
             onSubmit={handleSubmit(onSubmit)}
           >
             <Description>
-              <p>
-                Пожалуйста, сообщите нам, готовы ли вы прийти и что будете из
-                меню:
-              </p>
-              <b>P.S. - только для тех, кто уверен на 100%.</b>
+              Пожалуйста, сообщите нам, готовы ли вы прийти и что будете из
+              меню:
             </Description>
             <div className={'flex flex-col gap-5'}>
               <div className={'flex items-start gap-3 '}>
@@ -222,7 +219,7 @@ export function Form(props: FormProps) {
                 <InputField
                   {...register('name', { required: 'Без этого никак' })}
                   label={'Представьтесь, пожалуйста'}
-                  placeholder={'Введите имя...'}
+                  placeholder={'Введите фамилию и имя...'}
                   error={errors.name}
                 />
               </div>

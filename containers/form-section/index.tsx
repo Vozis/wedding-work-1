@@ -18,7 +18,7 @@ export default function FormSection() {
       <Title title={'Опрос'} className={'mb-10 text-center md:text-left'} />
       <div
         className={
-          ' md:grid md:grid-cols-[1fr,1fr] md:gap-10 lg:grid-cols-[1fr,2fr] lg:gap-20'
+          ' md:grid md:grid-cols-[1fr,1fr] md:gap-10 lg:grid-cols-[1fr,2fr] lg:gap-10'
         }
       >
         <Form className={'justify-stretch'} />
