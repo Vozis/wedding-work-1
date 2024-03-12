@@ -57,7 +57,7 @@ export default function InviteSection() {
       <div className={'block h-80 md:hidden'}>
         <ImageBlock
           className={
-            'h-full w-full bg-cover bg-[center_top_-12rem] grayscale md:h-full'
+            'h-full w-full bg-cover bg-[center_top_-14rem] grayscale md:h-full'
           }
           path={'/img/invite/1.jpg'}
         />
