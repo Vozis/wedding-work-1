@@ -24,7 +24,7 @@ const Description: FC<PropsWithChildren<IDescription>> = ({
   ...rest
 }) => {
   return (
-    <motion.p
+    <motion.div
       className={cn(className, 'text-2xl font-light')}
       initial={initial ? initial : isAnimated ? { y: 100, opacity: 0 } : {}}
       animate={animate ? animate : isAnimated ? { y: 0, opacity: 1 } : {}}
@@ -35,7 +35,7 @@ const Description: FC<PropsWithChildren<IDescription>> = ({
       }
     >
       {children}
-    </motion.p>
+    </motion.div>
   );
 };
 

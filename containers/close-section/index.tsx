@@ -11,7 +11,7 @@ export default function CloseSection() {
   return (
     <div
       className={
-        'flex h-full w-full items-center justify-center px-12 py-10 lg:px-40'
+        'flex h-full w-full items-center justify-center px-12 py-10 md:px-24 lg:px-40'
       }
       style={{
         background: `linear-gradient(0deg, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.33) 100%), url('/img/close.webp'), lightgray 50% / cover no-repeat`,
@@ -26,17 +26,28 @@ export default function CloseSection() {
       >
         <Description>
           На все вопросы, связанные с торжеством, с радостью ответит организатор
-          нашей свадьбы Светлана
+          нашей свадьбы, <b>Светлана</b>.
         </Description>
         <div className={'flex flex-col items-center gap-5'}>
-          <Link href="tel:89218807347" className={'border-b border-black'}>
+          <Link
+            href="tel:89218807347"
+            className={'border-b border-black text-xl'}
+          >
             8-921-880-73-47
           </Link>
-          <div className={'flex justify-center gap-5'}>
-            <Link href={'https://wa.me/79218807347'} target={'_blank'}>
+          <div className={'flex justify-center gap-3'}>
+            <Link
+              href={'https://wa.me/79218807347'}
+              target={'_blank'}
+              className={'p-2'}
+            >
               <BiLogoWhatsapp className={'text-[35px]'} />
             </Link>
-            <Link href={'https://wa.me/79218807347'} target={'_blank'}>
+            <Link
+              href={'https://wa.me/79218807347'}
+              target={'_blank'}
+              className={'p-2'}
+            >
               <BiLogoTelegram className={'text-[35px]'} />
             </Link>
           </div>

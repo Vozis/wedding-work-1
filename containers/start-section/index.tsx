@@ -89,7 +89,9 @@ export default function StartSection() {
         </div>
       </div>
 
-      <div className={'flex flex-col items-center justify-between px-5'}>
+      <div
+        className={'mx-auto flex flex-col items-center justify-between px-5'}
+      >
         <div className={'pt-2'}>
           <SuperTitle
             title={'Илья'}

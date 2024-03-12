@@ -3,14 +3,14 @@ $dark: #000000;
 @mixin btn() {
   width: 48px;
   height: 48px;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 @mixin icon($height, $width) {
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   position: relative;
   height: $height;
   width: $width;
@@ -19,7 +19,7 @@ $dark: #000000;
 }
 
 @mixin icon-before($height, $width, $top) {
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   position: absolute;
   width: $width;
   height: $height;
@@ -30,7 +30,7 @@ $dark: #000000;
 }
 
 @mixin icon-after($height, $width, $top) {
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   position: absolute;
   width: $width;
   height: $height;
@@ -41,7 +41,7 @@ $dark: #000000;
 }
 
 @mixin icon-circle($height, $width) {
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   position: absolute;
   height: $height;
   width: $width;
@@ -73,7 +73,7 @@ $dark: #000000;
   &.open {
     .icon {
       background: transparent;
-      transition-duration: 0.5s;
+      transition-duration: 0.3s;
 
       &:before {
         transform: rotateZ(45deg) scaleX(0.75) translate(-1px, 6px);

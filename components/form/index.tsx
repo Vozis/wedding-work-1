@@ -214,7 +214,7 @@ export function Form(props: FormProps) {
                 Пожалуйста, сообщите нам, готовы ли вы прийти и что будете из
                 меню:
               </p>
-              <b>(только для уверенных на 100%)</b>
+              <b>P.S. - только для тех, кто уверен на 100%.</b>
             </Description>
             <div className={'flex flex-col gap-5'}>
               <div className={'flex items-start gap-3 '}>
@@ -222,7 +222,7 @@ export function Form(props: FormProps) {
                 <InputField
                   {...register('name', { required: 'Без этого никак' })}
                   label={'Представьтесь, пожалуйста'}
-                  placeholder={'Кокорин Евгеша'}
+                  placeholder={'Введите имя...'}
                   error={errors.name}
                 />
               </div>

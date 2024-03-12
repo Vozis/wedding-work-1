@@ -47,7 +47,16 @@ export default function FormLoader({
       )}
       style={style}
     >
-      <Image src={cat} alt={'image'} width={150} height={150} />
+      <Image
+        src={cat}
+        alt={'image'}
+        width={150}
+        height={150}
+        style={{
+          width: 'auto',
+          height: 'auto',
+        }}
+      />
       <p className={'text-2xl'}>Пока идет загрузка, полюбуйтесь котиком )</p>
     </div>
   );
