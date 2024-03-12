@@ -23,16 +23,26 @@ export default function StartSection() {
       }}
     >
       <div
-        className={'absolute bottom-0 left-0 right-0 top-0 -z-1 md:hidden'}
+        className={'absolute bottom-0 left-0 right-0 top-0 -z-2 md:hidden'}
         style={{
-          background:
-            "linear-gradient(180deg, rgba(124, 124, 124, 0.00) 30%, rgba(0, 0, 0, 0.60) 60%, rgba(0, 0, 0, 0.9) 80%, #000 100%), url('/img/start/mobile.jpg'), lightgray 50% / cover no-repeat",
+          background: "url('/img/start/mobile.jpg')",
+          backgroundPositionY: '3rem',
+          backgroundPositionX: '90%',
           backgroundSize: 'cover',
-          backgroundPosition: 'right top',
+          backgroundRepeat: 'no-repeat',
           borderRadius: '500px 0 0 0',
         }}
       />
-
+      <div
+        className={'absolute bottom-0 left-0 right-0 top-0 -z-1 md:hidden'}
+        style={{
+          background:
+            'linear-gradient(to bottom, rgba(0,0,0, 0.00) 30%, rgba(0, 0, 0, 0.60) 60%, rgba(0, 0, 0, 0.9) 80%, #000 100%)',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          borderRadius: '500px 0 0 0',
+        }}
+      />
       <div
         className={
           'absolute bottom-0 left-0 right-0 top-0 -z-1 hidden grid-cols-4 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:z-1 before:bg-gradient-to-t before:from-black/100 before:to-black/30  sm:grid'
@@ -46,8 +56,8 @@ export default function StartSection() {
             priority
             style={{
               objectFit: 'cover',
+              objectPosition: '80%',
             }}
-            // loader={myImageLoader}
             sizes={'100vw, (max-width: 768px) 25vw'}
           />
         </div>
@@ -59,6 +69,7 @@ export default function StartSection() {
             priority
             style={{
               objectFit: 'cover',
+              objectPosition: '90%',
             }}
             sizes={'100vw, (max-width: 768px) 25vw'}
           />
@@ -71,6 +82,7 @@ export default function StartSection() {
             priority
             style={{
               objectFit: 'cover',
+              objectPosition: '10%',
             }}
             sizes={'100vw, (max-width: 768px) 25vw'}
           />
@@ -83,6 +95,7 @@ export default function StartSection() {
             priority
             style={{
               objectFit: 'cover',
+              objectPosition: '20%',
             }}
             sizes={'100vw, (max-width: 768px) 25vw'}
           />
