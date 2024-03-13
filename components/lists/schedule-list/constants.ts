@@ -24,7 +24,7 @@ export const scheduleList: IScheduleItem[] = [
   {
     title: 'Завершение торжества',
     description: 'К сожалению, даже такой прекрасный день может закончиться...',
-    time: '22:00',
+    time: '23:00',
     image: '/img/schedule/schedule-4.jpg',
   },
 ];
