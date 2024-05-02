@@ -1,7 +1,6 @@
 import Title from '@/components/typography/title';
 import Description from '@/components/typography/description';
 import Divider from '@/components/divider';
-import Button from '@/components/buttons/main-button';
 import Link from 'next/link';
 
 export default function Location() {
@@ -14,13 +13,12 @@ export default function Location() {
       <Title title={'Место проведения'} className={'text-center'} />
       <Divider />
       <Description>
-        Историческая Усадьба А.И. Путилова на Крестовском острове, с собственной
-        гранитной набережной и причалом на берегу реки Малой Невки, окружена
-        романтичными набережными и позволит соприкоснуться с частичкой истории
-        «северной столицы»
+        Отель «Левада» — это уголок спокойствия и уюта в самом сердце природы.
+        Вы сможете насладиться красотой окружающей местности и провести время
+        на свежем воздухе.
       </Description>
       <Link
-        href={'https://yandex.ru/maps/-/CDFUuQ-U'}
+        href={'https://yandex.ru/maps/org/park_otel_levada/157260580634/?ll=30.265796,60.126298&z=7'}
         target={'_blank'}
         className={
           'absolute -bottom-5 flex w-44 items-center justify-center rounded-xl bg-black px-5 py-2 text-xl text-white'

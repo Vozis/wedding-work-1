@@ -1,11 +1,7 @@
 import Title from '@/components/typography/title';
 import Form from '@/components/form';
-import Image from 'next/image';
-
-import logo2 from '@/public/img/logo2.svg';
 import ImageBlock from '@/components/image';
 import AnimateSection from '@/components/animate/section';
-import Description from '@/components/typography/description';
 
 export default function FormSection() {
   return (
@@ -22,7 +18,6 @@ export default function FormSection() {
         }
       >
         <Form className={'justify-stretch'} />
-        {/*<div className={'border border-yellow-400'}>Пример</div>*/}
         <div className={'hidden md:grid md:gap-5 lg:grid-cols-[1fr,1.5fr,1fr]'}>
           <ImageBlock
             className={'h-80 w-full bg-cover bg-center grayscale md:h-full'}

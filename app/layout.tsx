@@ -1,17 +1,15 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.scss';
-import Header from '@/components/header';
-import Footer from '@/components/footer';
-import { mirra, novelist, amstelvar, moniqa } from '@/libs/fonts';
-import React, { Suspense } from 'react';
+import { moniqa } from '@/libs/fonts';
+import React from 'react';
 import Providers from '@/providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Wedding | Илья и Анастасия',
-  description: 'Приглашение на свадьбу к Илье и Анастасии',
+  title: 'Wedding | Иван и Ксения',
+  description: 'Приглашение на свадьбу к Ивану и Ксении',
   icons: [
     {
       rel: 'icon',
@@ -132,7 +130,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={moniqa.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

@@ -2,10 +2,7 @@ import Description from '@/components/typography/description';
 import Title from '@/components/typography/title';
 import Subtitle from '@/components/typography/subtitle';
 import ClothesList from '../../components/lists/clothes-list';
-import {
-  clothesListMan,
-  clothesListWoman,
-} from '@/components/lists/clothes-list/constants';
+import { clothesListMan, clothesListWoman } from '@/components/lists/clothes-list/constants';
 import Image from 'next/image';
 import styles from './clothes.module.scss';
 import cn from 'clsx';
@@ -25,8 +22,13 @@ export default function ClothesSection() {
       />
       <div className={'flex flex-col gap-3 px-5 lg:flex-row lg:gap-10'}>
         <Description>
-          Мы старались сделать праздник красивым и очень просим в своих нарядах
-          поддержать стилистику нашей свадьбы:
+          Мы хотим, чтобы наша свадьба запомнилась вам как яркое и стильное событие.
+          Поэтому мы решили выдержать дресс-код в едином стиле — <b>Total Black</b>.
+        </Description>
+        <Description>
+          Мы уверены, что вы сможете подобрать идеальный образ, который
+          подчеркнёт вашу индивидуальность и красоту. Ведь чёрный цвет — это
+          символ стиля, роскоши и элегантности!
         </Description>
       </div>
       <article className={styles.clothesContent}>
@@ -80,7 +82,7 @@ export default function ClothesSection() {
           </div>
           <div className={'relative h-full w-full'}>
             <Image
-              src={'/img/clothes/clothes-man-4.jpeg'}
+              src={'/img/clothes/clothes-man-4.jpg'}
               alt={'Image'}
               loading={'lazy'}
               fill
@@ -146,7 +148,7 @@ export default function ClothesSection() {
             </div>
             <div className={'relative h-full w-full'}>
               <Image
-                src={'/img/clothes/clothes-woman-4.jpeg'}
+                src={'/img/clothes/clothes-woman-4.jpg'}
                 alt={'Image'}
                 loading={'lazy'}
                 fill
@@ -173,6 +175,7 @@ export default function ClothesSection() {
           </div>
         </div>
       </article>
+
     </AnimateSection>
   );
 }

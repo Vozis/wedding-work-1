@@ -1,6 +1,5 @@
 import Title from '@/components/typography/title';
 import Description from '@/components/typography/description';
-import Divider from '@/components/divider';
 import ImageBlock from '@/components/image';
 import React from 'react';
 import AnimateSection from '@/components/animate/section';
@@ -33,13 +32,13 @@ export default function InviteSection() {
           <p className={'text-6xl font-bold'}>00</p>
         </div>
         <div className={'flex items-center justify-center gap-3'}>
-          <p className={'text-4xl font-bold'}>08</p>
+          <p className={'text-4xl font-bold'}>29</p>
           <p
             className={
               'relative block after:absolute after:-left-1 after:-top-1.5 after:h-1.5 after:w-1.5 after:rounded-full after:bg-black'
             }
           />
-          <p className={'text-4xl font-bold'}>08</p>
+          <p className={'text-4xl font-bold'}>06</p>
           <p
             className={
               'relative block after:absolute after:-left-1 after:-top-1.5 after:h-1.5 after:w-1.5 after:rounded-full after:bg-black'
@@ -48,10 +47,10 @@ export default function InviteSection() {
           <p className={'text-4xl font-bold'}>24</p>
         </div>
         <Description className={'text-center'}>
-          Один день в этом году будет для нас особенным и мы хотим провести его
-          в кругу близких и друзей. Наша свадьба без вас не будет такой
-          счастливой, уютной и веселой! Приглашаем отметить этот день вместе с
-          нами!
+          Дорогие друзья!
+          Мы очень хотим, чтобы в этот день с нами рядом были самые близкие,
+          поэтому с большой радостью приглашаем Вас на наш первый семейный
+          праздник - нашу свадьбу!
         </Description>
       </div>
       <div className={'block h-80 md:hidden'}>

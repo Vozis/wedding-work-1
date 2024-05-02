@@ -7,8 +7,6 @@ import Image from 'next/image';
 
 import arrow from '@/public/img/Arrow.svg';
 import { useSectionInView } from '@/hooks/useSectionInView';
-import { useActiveSectionContext } from '@/providers/action-section-context';
-import AnimateSection from '@/components/animate/section';
 
 export default function StartSection() {
   const { ref } = useSectionInView('startSection');
@@ -23,7 +21,7 @@ export default function StartSection() {
       }}
     >
       <div
-        className={'absolute bottom-0 left-0 right-0 top-0 -z-2 md:hidden'}
+        className={'absolute bottom-0 left-0 right-0 top-0 -z-2 md:hidden  grayscale'}
         style={{
           background: "url('/img/start/mobile.jpg')",
           backgroundPositionY: '3rem',
@@ -48,7 +46,7 @@ export default function StartSection() {
           'absolute bottom-0 left-0 right-0 top-0 -z-1 hidden grid-cols-4 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:z-1 before:bg-gradient-to-t before:from-black/100 before:to-black/30  sm:grid'
         }
       >
-        <div className={'relative'}>
+        <div className={'relative grayscale'}>
           <Image
             src={'/img/start/1.jpg'}
             alt={'image'}
@@ -61,7 +59,7 @@ export default function StartSection() {
             sizes={'100vw, (max-width: 768px) 25vw'}
           />
         </div>
-        <div className={'relative'}>
+        <div className={'relative  grayscale'}>
           <Image
             src={'/img/start/2.jpg'}
             alt={'image'}
@@ -74,7 +72,7 @@ export default function StartSection() {
             sizes={'100vw, (max-width: 768px) 25vw'}
           />
         </div>
-        <div className={'relative'}>
+        <div className={'relative  grayscale'}>
           <Image
             src={'/img/start/3.jpg'}
             alt={'image'}
@@ -87,7 +85,7 @@ export default function StartSection() {
             sizes={'100vw, (max-width: 768px) 25vw'}
           />
         </div>
-        <div className={'relative'}>
+        <div className={'relative  grayscale'}>
           <Image
             src={'/img/start/4.jpg'}
             alt={'image'}
@@ -107,13 +105,13 @@ export default function StartSection() {
       >
         <div className={'pt-2'}>
           <SuperTitle
-            title={'Илья'}
+            title={'Иван'}
             className={
               'text-right text-[8rem] leading-[4rem] s:text-[9rem] s:leading-[5rem] sm:text-white'
             }
           />
           <SuperTitle
-            title={'Анастасия'}
+            title={'Ксения'}
             className={
               'block text-center text-[8rem] leading-[4rem] s:text-[9rem] s:leading-[5rem] sm:text-white '
             }

@@ -1,34 +1,25 @@
 'use client';
 
-import Image from 'next/image';
 import StartSection from '@/containers/start-section';
 import InviteSection from '@/containers/invite-section';
-import ClothesSection from '@/containers/clothes-section';
-import ScheduleSection from '@/containers/schedule-section';
-import CloseSection from '@/containers/close-section';
-import LocationSection from '@/containers/location-section';
-import DetailsSection from '@/containers/details-section';
-import ImagesSection from '@/containers/images-section';
 import dynamic from 'next/dynamic';
 import PageLoader from '@/components/loaders/page-loader';
-import React, { Fragment, Suspense, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
-import logoImage from '@/public/img/logo2.svg';
-import FormSection from '@/containers/form-section';
 
+
+// DynamicComponents
 const DynamicFormSection = dynamic(() => import('@/containers/form-section'));
 const DynamicScheduleSection = dynamic(
   () => import('@/containers/schedule-section'),
 );
-const DynamicImageSection = dynamic(
-  () => import('@/containers/images-section'),
-);
 const DynamicClothesSection = dynamic(
   () => import('@/containers/clothes-section'),
 );
-const DynamicCloseSection = dynamic(() => import('@/containers/close-section'));
+const DynamicDetailsSection = dynamic(() => import('@/containers/details-section'))
+const DynamicLocationSection = dynamic(() => import('@/containers/location-section'))
 
 const variants: Variants = {
   out: {
@@ -51,7 +42,7 @@ export default function Home() {
 
   useEffect(() => {
     const fn = () => {
-      // console.log('all content loaded');
+      console.log('all content loaded');
       setIsContentLoaded(true);
     };
 
@@ -85,15 +76,10 @@ export default function Home() {
           <main className="min-h-screen">
             <StartSection />
             <InviteSection />
-            <ClothesSection />
-            {/*<ScheduleSection />*/}
-            {/*<DynamicClothesSection />*/}
+            <DynamicClothesSection />
             <DynamicScheduleSection />
-            <LocationSection />
-            <DetailsSection />
-            {/*<ImagesSection />*/}
-            {/*<FormSection />*/}
-            {/*<DynamicImageSection />*/}
+            <DynamicLocationSection />
+            <DynamicDetailsSection />
             <DynamicFormSection />
           </main>
           <Footer />

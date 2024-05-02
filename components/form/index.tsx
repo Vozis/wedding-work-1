@@ -1,7 +1,7 @@
 'use client';
 
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
-import React, { useEffect, useState, Fragment, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { IGetGuestInfo } from '@/components/form/form.types';
 import Button from '@/components/buttons/main-button';
 import { InputField } from '@/components/form/inputs/input';
@@ -210,8 +210,7 @@ export function Form(props: FormProps) {
             onSubmit={handleSubmit(onSubmit)}
           >
             <Description>
-              Пожалуйста, сообщите нам, готовы ли вы прийти и что будете из
-              меню:
+              Будем очень ждать подтверждения вашего присутствия на нашем празднике <strong>до 1 июня </strong>, лично или любым другим удобным для вас способом:
             </Description>
             <div className={'flex flex-col gap-5'}>
               <div className={'flex items-start gap-3 '}>

@@ -1,10 +1,7 @@
-import Location from '@/components/location';
 import Description from '@/components/typography/description';
 import logo2 from '@/public/img/logo2.svg';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MdWhatsapp } from 'react-icons/md';
-import { FaWhatsapp, FaTelegram } from 'react-icons/fa';
 import { BiLogoTelegram, BiLogoWhatsapp } from 'react-icons/bi';
 
 export default function CloseSection() {
@@ -25,8 +22,9 @@ export default function CloseSection() {
         }
       >
         <Description>
-          На все вопросы, связанные с торжеством, с радостью ответит организатор
-          нашей свадьбы, <b>Светлана</b>.
+          В этот день мы будем немного заняты, поэтому в случае
+          возникновения вопросов обращайтесь за помощью
+          к нашему организатору <b>Светлане</b>.
         </Description>
         <div className={'flex flex-col items-center gap-5'}>
           <Link
