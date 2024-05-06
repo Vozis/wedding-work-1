@@ -44,7 +44,7 @@ export default function ClothesSection() {
         <div className={styles.clothesContent__manPhoto}>
           <div className={'relative h-full w-full'}>
             <Image
-              src={'/img/clothes/clothes-man-1.jpeg'}
+              src={'/img/clothes/clothes-man-1.png'}
               alt={'Image'}
               loading={'lazy'}
               fill
@@ -57,7 +57,7 @@ export default function ClothesSection() {
           </div>
           <div className={'relative h-full w-full'}>
             <Image
-              src={'/img/clothes/clothes-man-2.jpeg'}
+              src={'/img/clothes/clothes-man-2.png'}
               alt={'Image'}
               fill
               style={{
@@ -82,7 +82,7 @@ export default function ClothesSection() {
           </div>
           <div className={'relative h-full w-full'}>
             <Image
-              src={'/img/clothes/clothes-man-4.jpg'}
+              src={'/img/clothes/clothes-man-4.jpeg'}
               alt={'Image'}
               loading={'lazy'}
               fill
@@ -148,7 +148,7 @@ export default function ClothesSection() {
             </div>
             <div className={'relative h-full w-full'}>
               <Image
-                src={'/img/clothes/clothes-woman-4.jpg'}
+                src={'/img/clothes/clothes-woman-4.jpeg'}
                 alt={'Image'}
                 loading={'lazy'}
                 fill
