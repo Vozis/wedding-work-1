@@ -21,7 +21,7 @@ export default function StartSection() {
       }}
     >
       <div
-        className={'absolute bottom-0 left-0 right-0 top-0 -z-2 md:hidden'}
+        className={'absolute bottom-0 left-0 right-0 top-0 -z-2 md:hidden grayscale'}
         // style={{
         //   background: 'url(\'/img/start/mobile.jpg\')',
         //   backgroundPositionY: '3rem',
