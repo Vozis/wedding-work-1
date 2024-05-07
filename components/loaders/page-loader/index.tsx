@@ -1,9 +1,9 @@
 'use client';
 
-import { AnimatePresence, motion, usePresence, Variants } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
-import logoImage from '@/public/img/logo2.svg';
-import React, { useEffect } from 'react';
+import loadingImg from '@/public/img/loading.svg';
+import React from 'react';
 
 const variants: Variants = {
   out: {
@@ -50,7 +50,7 @@ export default function PageLoader() {
       >
         <Image
           priority
-          src={logoImage}
+          src={loadingImg}
           alt={'image'}
           // className={'animate-mount'}
         />
