@@ -18,22 +18,38 @@ export default function FormSection() {
         }
       >
         <Form className={'justify-stretch'} />
-        <div className={'hidden md:grid md:gap-5 lg:grid-cols-[1fr,1.5fr,1fr]'}>
+        <div className={'hidden md:block'}>
           <ImageBlock
-            className={'h-80 w-full bg-cover bg-center grayscale md:h-full'}
-            path={'/img/form/form-start.jpeg'}
+            className={'h-full w-full bg-cover bg-center grayscale md:h-full'}
+            path={'/img/form/form.jpeg'}
           />
-          <ImageBlock
-            className={
-              'lg:bg-center-bottom h-80 w-full bg-cover bg-center grayscale md:h-full'
-            }
-            path={'/img/form/form-middle.jpeg'}
-          />
-          <ImageBlock
-            className={'bg-top-bottom h-80 w-full bg-cover grayscale md:h-full'}
-            path={'/img/form/form-end.jpeg'}
-          />
+          {/*<ImageBlock*/}
+          {/*  className={*/}
+          {/*    'lg:bg-center-bottom h-80 w-full bg-cover bg-center grayscale md:h-full'*/}
+          {/*  }*/}
+          {/*  path={'/img/form/form-middle.jpeg'}*/}
+          {/*/>*/}
+          {/*<ImageBlock*/}
+          {/*  className={'bg-top-bottom h-80 w-full bg-cover grayscale md:h-full'}*/}
+          {/*  path={'/img/form/form-end.jpeg'}*/}
+          {/*/>*/}
         </div>
+        {/*<div className={'hidden md:grid md:gap-5 lg:grid-cols-[1fr,1.5fr,1fr]'}>*/}
+        {/*  <ImageBlock*/}
+        {/*    className={'h-80 w-full bg-cover bg-center grayscale md:h-full'}*/}
+        {/*    path={'/img/form/form-start.jpeg'}*/}
+        {/*  />*/}
+        {/*  <ImageBlock*/}
+        {/*    className={*/}
+        {/*      'lg:bg-center-bottom h-80 w-full bg-cover bg-center grayscale md:h-full'*/}
+        {/*    }*/}
+        {/*    path={'/img/form/form-middle.jpeg'}*/}
+        {/*  />*/}
+        {/*  <ImageBlock*/}
+        {/*    className={'bg-top-bottom h-80 w-full bg-cover grayscale md:h-full'}*/}
+        {/*    path={'/img/form/form-end.jpeg'}*/}
+        {/*  />*/}
+        {/*</div>*/}
       </div>
     </AnimateSection>
   );

@@ -54,6 +54,29 @@ export default function StartSection() {
       {/*  }}*/}
       {/*/>*/}
       <div
+        className={'absolute bottom-0 left-0 right-0 top-0 -z-2 max-md:hidden grayscale'}
+        // style={{
+        //   background: 'url(\'/img/start/mobile.jpg\')',
+        //   backgroundPositionY: '3rem',
+        //   backgroundPositionX: '90%',
+        //   backgroundSize: 'cover',
+        //   backgroundRepeat: 'no-repeat',
+        //   borderRadius: '500px 0 0 0',
+        // }}
+      >
+        <video
+          className='w-full h-full object-cover aspect-auto'
+          preload="auto"
+          playsInline
+          autoPlay
+          muted
+          loop
+        >
+          <source src="/img/start/desktop.mp4" type="video/mp4" />
+        </video>
+
+      </div>
+      {/*<div
         className={
           'absolute bottom-0 left-0 right-0 top-0 -z-1 hidden grid-cols-4 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:z-1 before:bg-gradient-to-t before:from-black/100 before:to-black/30  sm:grid'
         }
@@ -110,7 +133,7 @@ export default function StartSection() {
             sizes={'100vw, (max-width: 768px) 25vw'}
           />
         </div>
-      </div>
+      </div>*/}
 
       <div
         className={'mx-auto flex flex-col items-center justify-between px-5'}

@@ -6,11 +6,11 @@ export async function POST(request: NextRequest) {
   const data: DataType = await request.json();
   try {
     const newDataItem = await prisma.data.create({
-      data: {
+      data: {  
         name: data.name,
         confirmation: data.confirmation === 'true',
-        foodTaste: data.foodTaste,
-        alcoholTastes: data.alcoholTaste,
+        // foodTaste: data.foodTaste,
+        // alcoholTastes: data.alcoholTaste,
       },
     });
     return NextResponse.json({

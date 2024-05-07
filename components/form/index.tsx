@@ -1,14 +1,11 @@
 'use client';
 
-import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import React, { useEffect, useState, useRef } from 'react';
 import { IGetGuestInfo } from '@/components/form/form.types';
 import Button from '@/components/buttons/main-button';
 import { InputField } from '@/components/form/inputs/input';
 import Description from '@/components/typography/description';
-import { ReactSelectField } from '@/components/form/inputs/react-select';
-import { alcoholItems } from '@/libs/alohol';
-import { foodItems } from '@/libs/food';
 import { RadioField } from '@/components/form/inputs/radio';
 import cn from 'clsx';
 import SentBlock from '@/components/form/sent-block';
@@ -46,7 +43,6 @@ const variants: Variants = {
 export function Form(props: FormProps) {
   const [isSent, setIsSent] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  // const { ref, width, height } = useResizeObserver<HTMLFormElement>();
   const ref = useRef<HTMLFormElement>(null);
   const [{ height, width }, setSize] = useState<{
     width: number | undefined;
@@ -77,8 +73,8 @@ export function Form(props: FormProps) {
   } = useForm<IGetGuestInfo>({
     defaultValues: {
       confirmation: 'true',
-      foodTaste: 'Мясо',
-      alcoholTaste: ['Шампанское', 'Белое вино'],
+      // foodTaste: 'Мясо',
+      // alcoholTaste: ['Шампанское', 'Белое вино'],
     },
   });
 
@@ -245,44 +241,44 @@ export function Form(props: FormProps) {
                 </div>
               </div>
 
-              <div className={'flex items-start gap-3'}>
-                <span className={'w-6 text-5xl'}>3.</span>
-                <Controller
-                  name={'foodTaste'}
-                  control={control}
-                  render={({ field, fieldState: { error } }) => (
-                    <ReactSelectField
-                      label={'Вкусовые предпочтения'}
-                      options={foodItems || []}
-                      field={field}
-                      placeholder={' '}
-                      isMulti={false}
-                      error={error}
-                      isClearable={false}
-                      closeMenuOnSelect={true}
-                    />
-                  )}
-                />
-              </div>
-              <div className={'flex items-start gap-3'}>
-                <span className={'w-6 text-5xl'}>4.</span>
-                <Controller
-                  name={'alcoholTaste'}
-                  control={control}
-                  render={({ field, fieldState: { error } }) => (
-                    <ReactSelectField
-                      isClearable={true}
-                      label={'Алкогольные предпочтения'}
-                      options={alcoholItems || []}
-                      field={field}
-                      placeholder={' '}
-                      isMulti={true}
-                      error={error}
-                      closeMenuOnSelect={false}
-                    />
-                  )}
-                />
-              </div>
+              {/*<div className={'flex items-start gap-3'}>*/}
+              {/*  <span className={'w-6 text-5xl'}>3.</span>*/}
+              {/*  <Controller*/}
+              {/*    name={'foodTaste'}*/}
+              {/*    control={control}*/}
+              {/*    render={({ field, fieldState: { error } }) => (*/}
+              {/*      <ReactSelectField*/}
+              {/*        label={'Вкусовые предпочтения'}*/}
+              {/*        options={foodItems || []}*/}
+              {/*        field={field}*/}
+              {/*        placeholder={' '}*/}
+              {/*        isMulti={false}*/}
+              {/*        error={error}*/}
+              {/*        isClearable={false}*/}
+              {/*        closeMenuOnSelect={true}*/}
+              {/*      />*/}
+              {/*    )}*/}
+              {/*  />*/}
+              {/*</div>*/}
+              {/*<div className={'flex items-start gap-3'}>*/}
+              {/*  <span className={'w-6 text-5xl'}>4.</span>*/}
+              {/*  <Controller*/}
+              {/*    name={'alcoholTaste'}*/}
+              {/*    control={control}*/}
+              {/*    render={({ field, fieldState: { error } }) => (*/}
+              {/*      <ReactSelectField*/}
+              {/*        isClearable={true}*/}
+              {/*        label={'Алкогольные предпочтения'}*/}
+              {/*        options={alcoholItems || []}*/}
+              {/*        field={field}*/}
+              {/*        placeholder={' '}*/}
+              {/*        isMulti={true}*/}
+              {/*        error={error}*/}
+              {/*        closeMenuOnSelect={false}*/}
+              {/*      />*/}
+              {/*    )}*/}
+              {/*  />*/}
+              {/*</div>*/}
             </div>
             <Description>
               Наш праздник имеет формат 18+, поэтому просим заранее

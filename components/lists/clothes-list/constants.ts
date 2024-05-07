@@ -2,8 +2,7 @@ import { IClothesItem } from '@/components/lists/clothes-list/clothes-item';
 
 export const clothesListMan: IClothesItem[] = [
   { title: 'Черный костюм / смокинг' },
-  { title: 'Белая рубашка' },
-  { title: 'Черная бабочка' },
+  { title: 'Черная рубашка' },
 ];
 
 export const clothesListWoman: IClothesItem[] = [

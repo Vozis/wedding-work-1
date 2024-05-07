@@ -20,7 +20,7 @@ export default function ClothesSection() {
         title={'Дресс-код'}
         className={'flex-shrink-0 px-5 text-center md:text-left'}
       />
-      <div className={'flex flex-col gap-3 px-5 lg:flex-row lg:gap-10'}>
+      <div className={'flex flex-col gap-3 px-5 lg:max-w-[700px] lg:gap-6'}>
         <Description>
           Мы хотим, чтобы наша свадьба запомнилась вам как яркое и стильное событие.
           Поэтому мы решили выдержать дресс-код в едином стиле — <b>Total Black</b>.
@@ -44,7 +44,7 @@ export default function ClothesSection() {
         <div className={styles.clothesContent__manPhoto}>
           <div className={'relative h-full w-full'}>
             <Image
-              src={'/img/clothes/clothes-man-1.png'}
+              src={'/img/clothes/clothes-man-5.jpeg'}
               alt={'Image'}
               loading={'lazy'}
               fill
@@ -70,6 +70,7 @@ export default function ClothesSection() {
           <div className={'relative h-full w-full'}>
             <Image
               src={'/img/clothes/clothes-man-3.jpeg'}
+              // src={'/img/clothes/clothes-man-8.jpeg'}
               alt={'Image'}
               loading={'lazy'}
               fill
@@ -83,6 +84,7 @@ export default function ClothesSection() {
           <div className={'relative h-full w-full'}>
             <Image
               src={'/img/clothes/clothes-man-4.jpeg'}
+              // src={'/img/clothes/clothes-man-9.jpeg'}
               alt={'Image'}
               loading={'lazy'}
               fill

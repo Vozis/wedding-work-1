@@ -64,15 +64,15 @@ export default function InviteSection() {
       <div className={'hidden md:flex'}>
         <ImageBlock
           className={'h-full w-full bg-cover bg-center grayscale md:h-full'}
-          path={'/img/form/form-start.jpeg'}
+          path={'/img/start/2.jpg'}
         />
         <ImageBlock
           className={'h-full w-full bg-cover bg-center grayscale md:h-full'}
-          path={'/img/form/form-middle.jpeg'}
+          path={'/img/start/1.jpg'}
         />
         <ImageBlock
           className={'h-full w-full bg-cover bg-left grayscale md:h-full'}
-          path={'/img/form/form-end.jpeg'}
+          path={'/img/start/3.jpg'}
         />
       </div>
     </AnimateSection>
