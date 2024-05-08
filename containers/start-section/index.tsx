@@ -82,7 +82,7 @@ export default function StartSection({setIsLoaded}: IProps) {
           loop
           onLoad={() => setIsLoaded(true)}
         >
-          <source src="/img/start/desktop.mp4" type="video/mp4" />
+          <source src="/img/start/desktop-20.mp4" type="video/mp4" />
         </video>
 
       </div>

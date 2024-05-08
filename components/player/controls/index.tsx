@@ -1,5 +1,3 @@
-'use client';
-
 import React, { MutableRefObject, useCallback, useEffect, useRef } from 'react';
 import cn from 'clsx';
 import { usePlayer } from '@/hooks/usePlayer';
@@ -39,7 +37,7 @@ export default function Controls({
       );
     }
     playAnimationRef.current = requestAnimationFrame(repeat);
-  }, [audioRef, duration, progressBarRef, setTimeProgress]);
+  }, [audioRef, duration, progressBarRef]);
 
   useEffect(() => {
     if (audioRef && audioRef.current) {
