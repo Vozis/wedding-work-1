@@ -1,13 +1,17 @@
 'use client';
 
 import SuperTitle from '@/components/typography/super-title';
-import Player from '@/components/player';
 import Description from '@/components/typography/description';
 import Image from 'next/image';
 
 import arrow from '@/public/img/Arrow.svg';
 import { useSectionInView } from '@/hooks/useSectionInView';
 import { SetStateAction, Dispatch } from 'react';
+import dynamic from 'next/dynamic';
+
+const DynamicPlayer = dynamic(() => import('@/components/player'), {
+  ssr: false
+})
 
 interface IProps {
   setIsLoaded: Dispatch<SetStateAction<boolean>>;
@@ -159,7 +163,7 @@ export default function StartSection({setIsLoaded}: IProps) {
           />
         </div>
         <div className={'flex flex-col items-center gap-5'}>
-          <Player className={'flex flex-col items-center gap-5'} />
+          <DynamicPlayer className={'flex flex-col items-center gap-5'} />
           <Description className={'text-center text-white'}>
             Нажмите на Play и листайте ниже погрузитесь в настроение нашего
             торжества

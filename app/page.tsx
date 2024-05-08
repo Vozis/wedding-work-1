@@ -56,35 +56,63 @@ export default function Home() {
 
   return (
     <AnimatePresence mode={'wait'}>
-      {!isContentLoaded ? (
+      {!isContentLoaded && (
         <PageLoader />
-      ) : (
-        <motion.article
-          key={'body'}
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-            transition: {
-              duration: 1,
-              delay: 0.5,
-            },
-          }}
-        >
-          <Header />
-          <main className="min-h-screen">
-            <StartSection setIsLoaded={setIsContentLoaded} />
-            <InviteSection />
-            <DynamicClothesSection />
-            <DynamicScheduleSection />
-            <DynamicLocationSection />
-            <DynamicDetailsSection />
-            <DynamicFormSection />
-          </main>
-          <Footer />
-        </motion.article>
       )}
+      <motion.article
+        key={'body'}
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+          transition: {
+            duration: 1,
+            delay: 0.5,
+          },
+        }}
+      >
+        <Header />
+        <main className="min-h-screen">
+          <StartSection setIsLoaded={setIsContentLoaded} />
+          <InviteSection />
+          <DynamicClothesSection />
+          <DynamicScheduleSection />
+          <DynamicLocationSection />
+          <DynamicDetailsSection />
+          <DynamicFormSection />
+        </main>
+        <Footer />
+      </motion.article>
+      {/*{!isContentLoaded ? (*/}
+      {/*  <PageLoader />*/}
+      {/*) : (*/}
+      {/*  <motion.article*/}
+      {/*    key={'body'}*/}
+      {/*    initial={{*/}
+      {/*      opacity: 0,*/}
+      {/*    }}*/}
+      {/*    animate={{*/}
+      {/*      opacity: 1,*/}
+      {/*      transition: {*/}
+      {/*        duration: 1,*/}
+      {/*        delay: 0.5,*/}
+      {/*      },*/}
+      {/*    }}*/}
+      {/*  >*/}
+      {/*    <Header />*/}
+      {/*    <main className="min-h-screen">*/}
+      {/*      <StartSection setIsLoaded={setIsContentLoaded} />*/}
+      {/*      <InviteSection />*/}
+      {/*      <DynamicClothesSection />*/}
+      {/*      <DynamicScheduleSection />*/}
+      {/*      <DynamicLocationSection />*/}
+      {/*      <DynamicDetailsSection />*/}
+      {/*      <DynamicFormSection />*/}
+      {/*    </main>*/}
+      {/*    <Footer />*/}
+      {/*  </motion.article>*/}
+      {/*)}*/}
     </AnimatePresence>
   );
 }
