@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useRef, useState } from 'react';
 import ProgressBar from '@/components/player/progress-bar';
 import DisplayTrack from '@/components/player/display-track';
@@ -20,7 +18,6 @@ export default function Player({ className }: IPlayer) {
 
   return (
     <div className={cn('', className)}>
-      {/*<ReactPlayer ref={audioRef} url={currentTrack.src} />*/}
       <DisplayTrack
         currentTrack={currentTrack}
         audioRef={audioRef}
