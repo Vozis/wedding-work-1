@@ -28,15 +28,17 @@ export default function Controls({
   const playAnimationRef = useRef<any | null>(null);
 
   const repeat = useCallback(() => {
-    const currentTime = audioRef.current!.currentTime;
-    progressBarRef.current!.value = String(currentTime);
-    if (progressBarRef.current) {
-      progressBarRef.current!.style.setProperty(
-        '--range-progress',
-        `${(+progressBarRef.current.value / duration) * 100}%`,
-      );
+    if (audioRef && audioRef.current) {
+      const currentTime = audioRef.current!.currentTime;
+      progressBarRef.current!.value = String(currentTime);
+      if (progressBarRef.current) {
+        progressBarRef.current!.style.setProperty(
+          '--range-progress',
+          `${(+progressBarRef.current.value / duration) * 100}%`,
+        );
+      }
+      playAnimationRef.current = requestAnimationFrame(repeat);
     }
-    playAnimationRef.current = requestAnimationFrame(repeat);
   }, [audioRef, duration, progressBarRef]);
 
   useEffect(() => {
