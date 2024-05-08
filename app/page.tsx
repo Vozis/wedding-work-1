@@ -4,7 +4,7 @@ import StartSection from '@/containers/start-section';
 import InviteSection from '@/containers/invite-section';
 import dynamic from 'next/dynamic';
 import PageLoader from '@/components/loaders/page-loader';
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
@@ -46,7 +46,7 @@ export default function Home() {
       setIsContentLoaded(true);
     };
 
-    if (document.readyState === 'complete') {
+    if (typeof window !== 'undefined' && document.readyState === 'complete') {
       fn();
     } else {
       window.addEventListener('load', fn);
@@ -74,7 +74,7 @@ export default function Home() {
         >
           <Header />
           <main className="min-h-screen">
-            <StartSection />
+            <StartSection setIsLoaded={setIsContentLoaded} />
             <InviteSection />
             <DynamicClothesSection />
             <DynamicScheduleSection />

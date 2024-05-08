@@ -7,8 +7,13 @@ import Image from 'next/image';
 
 import arrow from '@/public/img/Arrow.svg';
 import { useSectionInView } from '@/hooks/useSectionInView';
+import { SetStateAction, Dispatch } from 'react';
 
-export default function StartSection() {
+interface IProps {
+  setIsLoaded: Dispatch<SetStateAction<boolean>>;
+}
+
+export default function StartSection({setIsLoaded}: IProps) {
   const { ref } = useSectionInView('startSection');
 
   return (
@@ -71,6 +76,7 @@ export default function StartSection() {
           autoPlay
           muted
           loop
+          onLoad={() => setIsLoaded(true)}
         >
           <source src="/img/start/desktop.mp4" type="video/mp4" />
         </video>
@@ -142,13 +148,13 @@ export default function StartSection() {
           <SuperTitle
             title={'Иван'}
             className={
-              'text-right text-[8rem] leading-[4rem] s:text-[9rem] s:leading-[5rem] sm:text-white'
+              'text-right text-[8rem] leading-[4rem] s:text-[10rem] s:leading-[5rem]'
             }
           />
           <SuperTitle
             title={'Ксения'}
             className={
-              'block text-center text-[8rem] leading-[4rem] s:text-[9rem] s:leading-[5rem] sm:text-white '
+              'block text-center text-[8rem] leading-[4rem] s:text-[10rem] s:leading-[5rem] '
             }
           />
         </div>
