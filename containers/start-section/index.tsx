@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import arrow from '@/public/img/Arrow.svg';
 import { useSectionInView } from '@/hooks/useSectionInView';
-import { SetStateAction, Dispatch, useRef } from 'react';
+import { SetStateAction, Dispatch, useRef, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 
 const DynamicPlayer = dynamic(() => import('@/components/player'), {
@@ -23,16 +23,14 @@ export default function StartSection({setIsLoaded}: IProps) {
   const mobileVideoRef = useRef<HTMLVideoElement>(null);
 
 
-  // useEffect(() => {
-  //   mobileVideoRef &&
-  //   mobileVideoRef.current &&
-  //   mobileVideoRef.current
-  //     .play()
-  //     .then(() => {})
-  //     .catch((err:any) => {
-  //       console.log(err);
-  //     });
-  // }, []);
+  useEffect(() => {
+    mobileVideoRef &&
+    mobileVideoRef.current &&
+    mobileVideoRef.current
+      .play()
+      .then(() => {})
+      .catch(() => {});
+  }, []);
 
   return (
     <section
