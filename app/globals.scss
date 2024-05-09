@@ -105,3 +105,36 @@ input[type='range']::-moz-range-thumb {
 input[type='range']:active::-moz-range-thumb {
   transform: scale(1.2);
 }
+
+
+video::-webkit-media-controls {
+  display: none !important;
+  opacity: 0;
+}
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-panel {
+
+  display: none!important;
+
+  -webkit-appearance: none;
+
+}
+
+//*::--webkit-media-controls-play-button {
+//
+//  display: none!important;
+//
+//  -webkit-appearance: none;
+//
+//}
+//
+//*::-webkit-media-controls-start-playback-button {
+//
+//  display: none!important;
+//
+//  -webkit-appearance: none;
+//
+//}

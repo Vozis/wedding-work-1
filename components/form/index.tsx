@@ -280,14 +280,9 @@ export function Form(props: FormProps) {
               {/*  />*/}
               {/*</div>*/}
             </div>
-            <Description>
-              Наш праздник имеет формат 18+, поэтому просим заранее
-              предусмотреть с кем останутся ваши детки, пока вы будете отдыхать
-              на празднике
-            </Description>
             <Button
               type={'submit'}
-              className={'w-64 self-center text-xl'}
+              className={'w-full self-center text-xl'}
               // onClick={() => setSaveSizes(true)}
               // onClick={() => resizeHandler()}
             >
