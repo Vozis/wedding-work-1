@@ -35,8 +35,7 @@ export default function StartSection({setIsLoaded}: IProps) {
         imgElement.src = '/img/start/1.jpg';
         imgElement.alt = 'image';
         imgContainer.style.background ='linear-gradient(to bottom, rgba(0,0,0, 0.00) 30%, rgba(0, 0, 0, 0.60) 60%, rgba(0, 0, 0, 0.9) 80%, #000 100%)';
-        imgContainer.appendChild(imgElement);
-        mobileVideoRef.current!.parentNode!.replaceChild(imgContainer, mobileVideoRef.current!);
+        mobileVideoRef.current!.parentNode!.replaceChild(imgElement, mobileVideoRef.current!);
       });
   }, []);
 
@@ -57,7 +56,6 @@ export default function StartSection({setIsLoaded}: IProps) {
     imgElement.className ='w-full h-full object-cover aspect-auto';
     imgElement.src = '/img/start/1.jpg';
     imgElement.alt = 'image';
-    imgElement.style.background =''
     mobileVideoRef.current!.parentNode!.replaceChild(imgElement, mobileVideoRef.current!);
   };
 
