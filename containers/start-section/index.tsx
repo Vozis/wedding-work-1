@@ -47,6 +47,8 @@ export default function StartSection({setIsLoaded}: IProps) {
           autoPlay
           muted
           loop
+          controls={false}
+          onLoad={() => setIsLoaded(true)}
         >
           <source src="/img/start/1.mp4" type="video/mp4" />
         </video>
@@ -80,6 +82,7 @@ export default function StartSection({setIsLoaded}: IProps) {
           autoPlay
           muted
           loop
+          controls={false}
           onLoad={() => setIsLoaded(true)}
         >
           <source src="/img/start/desktop-20.mp4" type="video/mp4" />
