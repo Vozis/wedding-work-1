@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import arrow from '@/public/img/Arrow.svg';
 import { useSectionInView } from '@/hooks/useSectionInView';
-import { SetStateAction, Dispatch } from 'react';
+import { SetStateAction, Dispatch, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 
 const DynamicPlayer = dynamic(() => import('@/components/player'), {
@@ -19,6 +19,20 @@ interface IProps {
 
 export default function StartSection({setIsLoaded}: IProps) {
   const { ref } = useSectionInView('startSection');
+
+  const mobileVideoRef = useRef<HTMLVideoElement>(null);
+
+
+  useEffect(() => {
+    mobileVideoRef &&
+    mobileVideoRef.current &&
+    mobileVideoRef.current
+      .play()
+      .then(() => {})
+      .catch((err:any) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <section
@@ -44,7 +58,7 @@ export default function StartSection({setIsLoaded}: IProps) {
           className='w-full h-full object-cover aspect-auto'
           preload="auto"
           playsInline
-          autoPlay
+          ref={mobileVideoRef}
           muted
           loop
           controls={false}
