@@ -29,12 +29,14 @@ export default function StartSection({setIsLoaded}: IProps) {
       .play()
       .then(() => {})
       .catch(() => {
+        const imgContainer = document.createElement('div');
         const imgElement = document.createElement('img');
         imgElement.className ='w-full h-full object-cover aspect-auto';
         imgElement.src = '/img/start/1.jpg';
         imgElement.alt = 'image';
-        imgElement.style.background ='linear-gradient(to bottom, rgba(0,0,0, 0.00) 30%, rgba(0, 0, 0, 0.60) 60%, rgba(0, 0, 0, 0.9) 80%, #000 100%)';
-        mobileVideoRef.current!.parentNode!.replaceChild(imgElement, mobileVideoRef.current!);
+        imgContainer.style.background ='linear-gradient(to bottom, rgba(0,0,0, 0.00) 30%, rgba(0, 0, 0, 0.60) 60%, rgba(0, 0, 0, 0.9) 80%, #000 100%)';
+        imgContainer.appendChild(imgElement);
+        mobileVideoRef.current!.parentNode!.replaceChild(imgContainer, mobileVideoRef.current!);
       });
   }, []);
 
