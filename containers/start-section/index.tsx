@@ -22,26 +22,32 @@ export default function StartSection({setIsLoaded}: IProps) {
 
   const mobileVideoRef = useRef<HTMLVideoElement>(null);
 
-  // useEffect(() => {
-  //   mobileVideoRef &&
-  //   mobileVideoRef.current &&
-  //   mobileVideoRef.current
-  //     .play()
-  //     .then(() => {})
-  //     .catch(() => {});
-  // }, []);
-
   useEffect(() => {
-    const videoElement = mobileVideoRef.current;
-    if (videoElement) {
-      videoElement.addEventListener('error', handleVideoError);
-    }
-    return () => {
-      if (videoElement) {
-        videoElement.removeEventListener('error', handleVideoError);
-      }
-    };
+    mobileVideoRef &&
+    mobileVideoRef.current &&
+    mobileVideoRef.current
+      .play()
+      .then(() => {})
+      .catch(() => {
+        const imgElement = document.createElement('img');
+        imgElement.className ='w-full h-full object-cover aspect-auto';
+        imgElement.src = '/img/start/1.jpg';
+        imgElement.alt = 'image';
+        mobileVideoRef.current!.parentNode!.replaceChild(imgElement, mobileVideoRef.current!);
+      });
   }, []);
+
+  // useEffect(() => {
+  //   const videoElement = mobileVideoRef.current;
+  //   if (videoElement) {
+  //     videoElement.addEventListener('error', handleVideoError);
+  //   }
+  //   return () => {
+  //     if (videoElement) {
+  //       videoElement.removeEventListener('error', handleVideoError);
+  //     }
+  //   };
+  // }, []);
 
   const handleVideoError = () => {
     const imgElement = document.createElement('img');
