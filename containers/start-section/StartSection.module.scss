@@ -1,0 +1,20 @@
+.img {
+  @apply aspect-auto h-full w-full object-cover;
+}
+
+.imgGradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0.6) 60%,
+    rgba(0, 0, 0, 0.9) 80%,
+    #000 100%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+}

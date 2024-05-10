@@ -6,59 +6,48 @@ import Image from 'next/image';
 
 import arrow from '@/public/img/Arrow.svg';
 import { useSectionInView } from '@/hooks/useSectionInView';
-import { SetStateAction, Dispatch, useRef, useEffect } from 'react';
+import React, { SetStateAction, Dispatch, useRef, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 
+import s from './StartSection.module.scss';
+
 const DynamicPlayer = dynamic(() => import('@/components/player'), {
-  ssr: false
-})
+  ssr: false,
+});
 
 interface IProps {
   setIsLoaded: Dispatch<SetStateAction<boolean>>;
 }
 
-export default function StartSection({setIsLoaded}: IProps) {
+export default function StartSection({ setIsLoaded }: IProps) {
   const { ref } = useSectionInView('startSection');
 
   const mobileVideoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     mobileVideoRef &&
-    mobileVideoRef.current &&
-    mobileVideoRef.current
-      .play()
-      .then(() => {})
-      .catch(() => {
-        const imgContainer = document.createElement('div');
-        const imgElement = document.createElement('img');
-        imgElement.className ='w-full h-full object-cover aspect-auto';
-        imgElement.src = '/img/start/1.jpg';
-        imgElement.alt = 'image';
-        imgContainer.style.background ='linear-gradient(to bottom, rgba(0,0,0, 0.00) 30%, rgba(0, 0, 0, 0.60) 60%, rgba(0, 0, 0, 0.9) 80%, #000 100%)';
-        mobileVideoRef.current!.parentNode!.replaceChild(imgElement, mobileVideoRef.current!);
-      });
+      mobileVideoRef.current &&
+      mobileVideoRef.current
+        .play()
+        .then(() => {})
+        .catch(() => {
+          const imgContainer = document.createElement('div');
+          imgContainer.className =
+            'absolute bottom-0 left-0 right-0 top-0 -z-2';
+          const gradientElement = document.createElement('div');
+          gradientElement.className = `${s.imgGradient}`;
+          const imgElement = document.createElement('img');
+          imgElement.className = `${s.img}`;
+          imgElement.src = '/img/start/1.jpg';
+          imgElement.alt = 'image';
+          imgContainer.appendChild(gradientElement);
+          imgContainer.appendChild(imgElement);
+          mobileVideoRef.current!.parentNode!.replaceChild(
+            imgContainer,
+            mobileVideoRef.current!,
+          );
+        });
   }, []);
-
-  // useEffect(() => {
-  //   const videoElement = mobileVideoRef.current;
-  //   if (videoElement) {
-  //     videoElement.addEventListener('error', handleVideoError);
-  //   }
-  //   return () => {
-  //     if (videoElement) {
-  //       videoElement.removeEventListener('error', handleVideoError);
-  //     }
-  //   };
-  // }, []);
-
-  const handleVideoError = () => {
-    const imgElement = document.createElement('img');
-    imgElement.className ='w-full h-full object-cover aspect-auto';
-    imgElement.src = '/img/start/1.jpg';
-    imgElement.alt = 'image';
-    mobileVideoRef.current!.parentNode!.replaceChild(imgElement, mobileVideoRef.current!);
-  };
-
 
   return (
     <section
@@ -70,18 +59,12 @@ export default function StartSection({setIsLoaded}: IProps) {
       }}
     >
       <div
-        className={'absolute bottom-0 left-0 right-0 top-0 -z-2 md:hidden grayscale'}
-        // style={{
-        //   background: 'url(\'/img/start/mobile.jpg\')',
-        //   backgroundPositionY: '3rem',
-        //   backgroundPositionX: '90%',
-        //   backgroundSize: 'cover',
-        //   backgroundRepeat: 'no-repeat',
-        //   borderRadius: '500px 0 0 0',
-        // }}
+        className={
+          'absolute bottom-0 left-0 right-0 top-0 -z-2 grayscale md:hidden'
+        }
       >
         <video
-          className='w-full h-full object-cover aspect-auto'
+          className="aspect-auto h-full w-full object-cover"
           preload="auto"
           playsInline
           ref={mobileVideoRef}
@@ -93,7 +76,6 @@ export default function StartSection({setIsLoaded}: IProps) {
         >
           <source src="/img/start/1.mp4" type="video/mp4" />
         </video>
-
       </div>
       {/*<div*/}
       {/*  className={'absolute bottom-0 left-0 right-0 top-0 -z-1 md:hidden'}*/}
@@ -106,7 +88,9 @@ export default function StartSection({setIsLoaded}: IProps) {
       {/*  }}*/}
       {/*/>*/}
       <div
-        className={'absolute bottom-0 left-0 right-0 top-0 -z-2 max-md:hidden grayscale'}
+        className={
+          'absolute bottom-0 left-0 right-0 top-0 -z-2 grayscale max-md:hidden'
+        }
         // style={{
         //   background: 'url(\'/img/start/mobile.jpg\')',
         //   backgroundPositionY: '3rem',
@@ -117,7 +101,7 @@ export default function StartSection({setIsLoaded}: IProps) {
         // }}
       >
         <video
-          className='w-full h-full object-cover aspect-auto'
+          className="aspect-auto h-full w-full object-cover"
           preload="auto"
           playsInline
           autoPlay
@@ -128,7 +112,6 @@ export default function StartSection({setIsLoaded}: IProps) {
         >
           <source src="/img/start/desktop-20.mp4" type="video/mp4" />
         </video>
-
       </div>
       {/*<div
         className={

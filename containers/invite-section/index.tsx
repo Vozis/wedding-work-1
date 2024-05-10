@@ -47,7 +47,6 @@ export default function InviteSection() {
           <p className={'text-4xl font-bold'}>24</p>
         </div>
         <Description className={'text-center'}>
-          Дорогие друзья!
           Мы очень хотим, чтобы в этот день с нами рядом были самые близкие,
           поэтому с большой радостью приглашаем Вас на наш первый семейный
           праздник - нашу свадьбу!
@@ -55,9 +54,7 @@ export default function InviteSection() {
       </div>
       <div className={'block h-80 md:hidden'}>
         <ImageBlock
-          className={
-            'h-full w-full bg-cover grayscale md:h-full'
-          }
+          className={'h-full w-full bg-cover grayscale md:h-full'}
           path={'/img/start/3.jpg'}
         />
       </div>
