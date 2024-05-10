@@ -2,7 +2,10 @@ import Description from '@/components/typography/description';
 import Title from '@/components/typography/title';
 import Subtitle from '@/components/typography/subtitle';
 import ClothesList from '../../components/lists/clothes-list';
-import { clothesListMan, clothesListWoman } from '@/components/lists/clothes-list/constants';
+import {
+  clothesListMan,
+  clothesListWoman,
+} from '@/components/lists/clothes-list/constants';
 import Image from 'next/image';
 import styles from './clothes.module.scss';
 import cn from 'clsx';
@@ -22,8 +25,9 @@ export default function ClothesSection() {
       />
       <div className={'flex flex-col gap-3 px-5 lg:max-w-[700px] lg:gap-6'}>
         <Description>
-          Мы хотим, чтобы наша свадьба запомнилась вам как яркое и стильное событие.
-          Поэтому мы решили выдержать дресс-код в едином стиле — <b>Total Black</b>.
+          Мы хотим, чтобы наша свадьба запомнилась вам как яркое и стильное
+          событие. Поэтому мы решили выдержать дресс-код в едином стиле —{' '}
+          <b>Total Black</b>.
         </Description>
         <Description>
           Мы уверены, что вы сможете подобрать идеальный образ, который
@@ -57,7 +61,7 @@ export default function ClothesSection() {
           </div>
           <div className={'relative h-full w-full'}>
             <Image
-              src={'/img/clothes/clothes-man-2.png'}
+              src={'/img/clothes/clothes-man-12.png'}
               alt={'Image'}
               fill
               style={{
@@ -69,8 +73,7 @@ export default function ClothesSection() {
           </div>
           <div className={'relative h-full w-full'}>
             <Image
-              src={'/img/clothes/clothes-man-3.jpeg'}
-              // src={'/img/clothes/clothes-man-8.jpeg'}
+              src={'/img/clothes/clothes-man-10.jpeg'}
               alt={'Image'}
               loading={'lazy'}
               fill
@@ -83,14 +86,13 @@ export default function ClothesSection() {
           </div>
           <div className={'relative h-full w-full'}>
             <Image
-              src={'/img/clothes/clothes-man-4.jpeg'}
-              // src={'/img/clothes/clothes-man-9.jpeg'}
+              src={'/img/clothes/clothes-man-11.jpeg'}
               alt={'Image'}
               loading={'lazy'}
               fill
               style={{
                 objectFit: 'cover',
-                filter: 'saturate(0%)',
+                filter: 'saturate(0%) brightness(1.7)',
               }}
               sizes={'50vw, (max-width:767px) 25vw'}
             />
@@ -177,7 +179,6 @@ export default function ClothesSection() {
           </div>
         </div>
       </article>
-
     </AnimateSection>
   );
 }

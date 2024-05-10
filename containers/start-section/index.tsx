@@ -1,5 +1,3 @@
-'use client';
-
 import SuperTitle from '@/components/typography/super-title';
 import Description from '@/components/typography/description';
 import Image from 'next/image';
